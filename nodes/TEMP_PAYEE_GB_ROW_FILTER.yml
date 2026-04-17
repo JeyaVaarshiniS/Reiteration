@@ -1,0 +1,69 @@
+fileVersion: 1
+id: a6c7b94d-12e3-4f51-b8d2-64f1e5c8932c
+name: TEMP_PAYEE_GB_ROW_FILTER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALLIANT_CLAIMS_ASTRUS_STAGE_DBO
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1c2d3e4f-5a6b-7c8d-9e0f-1a2b3c4d5e6f
+          stepCounter: a6c7b94d-12e3-4f51-b8d2-64f1e5c8932c
+        config: {}
+        dataType: NUMBER(10,0)
+        description: ""
+        name: ACA_TRANSACTION_PAYMENT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2f3a4b5c-6d7e-8f9a-0b1c-2d3e4f5a6b7c
+                stepCounter: 83b1a2f6-9c41-4e7a-a43b-3d61180d55e9
+            transform: ""
+        transform: "ACA_TRANSACTION_PAYMENT_ID"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d3e4f5a-6b7c-8d9e-0f1a-2b3c4d5e6f7a
+          stepCounter: a6c7b94d-12e3-4f51-b8d2-64f1e5c8932c
+        config: {}
+        dataType: NUMBER(10,0)
+        description: ""
+        name: ROW_SEQUENCE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: "ROW_NUMBER() OVER (PARTITION BY SOURCE_SYSTEM_PAYEE_ID ORDER BY PAYMENT_TRANSACTION_DATE DESC, PAYMENT_SEQUENCE_NUMBER DESC, ACA_DATE_UPDATED DESC)"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ALLIANT_CLAIMS_ASTRUS_STAGE_DBO
+            nodeName: TEMP_PAYEE_GB_HASH
+        join:
+          joinCondition: |-
+            FROM {{ ref('ALLIANT_CLAIMS_ASTRUS_STAGE_DBO', 'TEMP_PAYEE_GB_HASH') }}
+            WHERE SOURCE_SYSTEM_PAYEE_ID IS NOT NULL
+        name: TEMP_PAYEE_GB_ROW_FILTER
+        noLinkRefs: []
+  name: TEMP_PAYEE_GB_ROW_FILTER
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

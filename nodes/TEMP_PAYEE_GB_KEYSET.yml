@@ -1,0 +1,162 @@
+fileVersion: 1
+id: 4a5c8e23-7b49-411a-8c76-d922b0c3f5a1
+name: TEMP_PAYEE_GB_KEYSET
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALLIANT_CLAIMS_ASTRUS_STAGE_DBO
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4e5f67a-8b9c-0d1e-2f3a-4b5c6d7e8f9a
+          stepCounter: 4a5c8e23-7b49-411a-8c76-d922b0c3f5a1
+        config: {}
+        dataType: NUMBER(10,0)
+        description: ""
+        name: ACA_TRANSACTION_PAYMENT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4f128bc2-a5d6-44b0-9a2c-e1a53c15d48a
+                stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+            transform: ""
+        transform: "ACA_TRANSACTION_PAYMENT_ID"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e5f67a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b
+          stepCounter: 4a5c8e23-7b49-411a-8c76-d922b0c3f5a1
+        config: {}
+        dataType: VARCHAR(12)
+        description: ""
+        name: PAYEE_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d43b2f81-c712-4318-ae2d-82d8c39e2fbc
+                stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+            transform: ""
+        transform: "CASE PAYEE_NAME_FORMAT WHEN 'I' THEN 'INDIVIDUAL' WHEN 'O' THEN 'ORGANIZATION' ELSE NULL END"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f67a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c
+          stepCounter: 4a5c8e23-7b49-411a-8c76-d922b0c3f5a1
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: PAYEE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8e57f12a-3c92-4d7a-b9e3-2f8d4a9c8b7f
+                stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+            transform: ""
+        transform: "CASE PAYEE_NAME_FORMAT WHEN 'I' THEN NULLIF(LTRIM(RTRIM(CONCAT(PAYEE_FIRSTNAME, ' ', CAST(PAYEE_LASTNAME_ENCRYPTED AS VARCHAR(512))))), '') WHEN 'O' THEN CAST(PAYEE_ORGANIZATION_NAME_ENCRYPTED AS VARCHAR(512)) ELSE NULL END"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d
+          stepCounter: 4a5c8e23-7b49-411a-8c76-d922b0c3f5a1
+        config: {}
+        dataType: VARCHAR(16)
+        description: ""
+        name: IRS_TAX_IDENTIFICATION_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5c8e2f1d-9a4b-43cd-8e7f-6a5b4c3d2e1f
+                stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+            transform: ""
+        transform: "CAST(PAYEE_IRS_TAX_IDENTIFICATION_NUMBER_ENCRYPTED AS VARCHAR(512))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e
+          stepCounter: 4a5c8e23-7b49-411a-8c76-d922b0c3f5a1
+        config: {}
+        dataType: DATE
+        description: ""
+        name: PAYMENT_TRANSACTION_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2f1d5c8e-9a4b-43cd-8e7f-6a5b4c3d2e1f
+                stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+            transform: ""
+        transform: "PAYMENT_TRANSACTION_DATE"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f
+          stepCounter: 4a5c8e23-7b49-411a-8c76-d922b0c3f5a1
+        config: {}
+        dataType: NUMBER(5,0)
+        description: ""
+        name: PAYMENT_SEQUENCE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9a4b5c8e-2f1d-43cd-8e7f-6a5b4c3d2e1f
+                stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+            transform: ""
+        transform: "CAST(PAYMENT_SEQUENCE_NUMBER AS NUMBER(5,0))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a
+          stepCounter: 4a5c8e23-7b49-411a-8c76-d922b0c3f5a1
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        description: ""
+        name: ACA_DATE_UPDATED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 43cd9a4b-5c8e-2f1d-8e7f-6a5b4c3d2e1f
+                stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+            transform: ""
+        transform: "ACA_DATE_UPDATED"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1e2f3a4b-5c6d-7e8f-9a0b-1c2d3e4f5a6b
+          stepCounter: 4a5c8e23-7b49-411a-8c76-d922b0c3f5a1
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: MAIL_TO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8e7f43cd-9a4b-5c8e-2f1d-6a5b4c3d2e1f
+                stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+            transform: ""
+        transform: "CASE MAIL_TO_NAMEFORMAT WHEN 'I' THEN NULLIF(LTRIM(RTRIM(CONCAT(MAIL_TO_FIRSTNAME, ' ', CAST(MAIL_TO_LASTNAME_ENCRYPTED AS VARCHAR(512))))), '') WHEN 'O' THEN CAST(MAIL_TO_ORGANIZATIONNAME_ENCRYPTED AS VARCHAR(512)) ELSE NULL END"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ALLIANT_CLAIMS_ASTRUS_DBO
+            nodeName: ACA_TRANSACTION_PAYMENT
+        join:
+          joinCondition: |-
+            FROM {{ ref('ALLIANT_CLAIMS_ASTRUS_DBO', 'ACA_TRANSACTION_PAYMENT') }}
+            WHERE ACA_DATE_UPDATED > IFF(COALESCE('{{ parameters.IBYPASSDATEFILTERS }}', '0') = '1', '1900-01-01 00:00:00.000'::TIMESTAMP_NTZ, (SELECT COALESCE(MAX(ACA_DATE_UPDATED), '1776-07-04 00:00:00.000'::TIMESTAMP_NTZ) FROM ALLIANT_CLAIMS_ASTRUS.DBO.ACA_PAYEE_GB WHERE ACA_PAYEE_GB_ID <> -1))
+            AND PAYMENT_TRANSACTION_DATE > IFF(COALESCE('{{ parameters.IBYPASSDATEFILTERS }}', '0') = '1', '1900-01-01'::DATE, (SELECT TRANSACTION_DATE FROM ALLIANT_CLAIMS_ASTRUS.DBO.V_ACA_TRANSACTION_DATE_CURRENT WHERE SOURCE_SYSTEM = 'GB'))
+        name: TEMP_PAYEE_GB_KEYSET
+        noLinkRefs: []
+  name: TEMP_PAYEE_GB_KEYSET
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
