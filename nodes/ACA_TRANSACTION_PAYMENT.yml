@@ -1,0 +1,400 @@
+fileVersion: 1
+id: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+name: ACA_TRANSACTION_PAYMENT
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: ALLIANT_CLAIMS_ASTRUS_DBO
+  metadata:
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4f128bc2-a5d6-44b0-9a2c-e1a53c15d48a
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: NUMBER(10,0)
+        defaultValue: ""
+        description: ""
+        name: ACA_TRANSACTION_PAYMENT_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d43b2f81-c712-4318-ae2d-82d8c39e2fbc
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PAYEE_NAME_FORMAT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8e57f12a-3c92-4d7a-b9e3-2f8d4a9c8b7f
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PAYEE_FIRSTNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a1f8b34c-6d2e-4b1a-9f5c-8e3d7a2c4b5f
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: BINARY
+        defaultValue: ""
+        description: ""
+        name: PAYEE_LASTNAME_ENCRYPTED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3d7a2c4b-5f1e-48bc-9f2d-8a3b6c4e5f1d
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: BINARY
+        defaultValue: ""
+        description: ""
+        name: PAYEE_ORGANIZATION_NAME_ENCRYPTED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5c8e2f1d-9a4b-43cd-8e7f-6a5b4c3d2e1f
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: BINARY
+        defaultValue: ""
+        description: ""
+        name: PAYEE_IRS_TAX_IDENTIFICATION_NUMBER_ENCRYPTED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f1d5c8e-9a4b-43cd-8e7f-6a5b4c3d2e1f
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: PAYMENT_TRANSACTION_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9a4b5c8e-2f1d-43cd-8e7f-6a5b4c3d2e1f
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: NUMBER(5,0)
+        defaultValue: ""
+        description: ""
+        name: PAYMENT_SEQUENCE_NUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 43cd9a4b-5c8e-2f1d-8e7f-6a5b4c3d2e1f
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        name: ACA_DATE_UPDATED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8e7f43cd-9a4b-5c8e-2f1d-6a5b4c3d2e1f
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: MAIL_TO_NAMEFORMAT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6a5b8e7f-43cd-9a4b-5c8e-2f1d4c3d2e1f
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: MAIL_TO_FIRSTNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4c3d6a5b-8e7f-43cd-9a4b-5c8e2f1d2e1f
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: BINARY
+        defaultValue: ""
+        description: ""
+        name: MAIL_TO_LASTNAME_ENCRYPTED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2e1f4c3d-6a5b-8e7f-43cd-9a4b5c8e2f1d
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: BINARY
+        defaultValue: ""
+        description: ""
+        name: MAIL_TO_ORGANIZATIONNAME_ENCRYPTED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f8a9b0c-1d2e-3f4a-5b6c-7d8e9f0a1b2c
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: BINARY
+        defaultValue: ""
+        description: ""
+        name: MAIL_TO_ADDRESS_ENCRYPTED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3b4c5d6e-7f8a-9b0c-1d2e-3f4a5b6c7d8e
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: MAIL_TO_CITY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e0f1a2b-3c4d-5e6f-7a8b-9c0d1e2f3a4b
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: MAIL_TO_STATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5c6d7e8f-9a0b-1c2d-3e4f-5a6b7c8d9e0f
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: MAIL_TO_ZIPCODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: MAIL_TO_COUNTRY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d8e9f0a1-b2c3-d4e5-f6a7-b8c9d0e1f2a3
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: BINARY
+        defaultValue: ""
+        description: ""
+        name: PAYEE_ADDRESS_ENCRYPTED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b8c9d0e1-f2a3-d8e9-f0a1-b2c3d4e5f6a7
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PAYEE_CITY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f0a1b2c3-d4e5-f6a7-b8c9-d0e1f2a3d8e9
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PAYEE_STATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4e5f6a7-b8c9-d0e1-f2a3-d8e9f0a1b2c3
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PAYEE_ZIPCODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b2c3d4e5-f6a7-b8c9-d0e1-f2a3d8e9f0a1
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PAYEE_COUNTRY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f6a7b8c9-d0e1-f2a3-d8e9-f0a1b2c3d4e5
+          stepCounter: 1c324bc1-5f21-4d32-9c98-1a5e1974dc3e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PAYEE_IRS_FORM_1099_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: ACA_TRANSACTION_PAYMENT
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
