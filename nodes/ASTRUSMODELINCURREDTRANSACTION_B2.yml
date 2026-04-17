@@ -1,0 +1,268 @@
+fileVersion: 1
+id: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+name: ASTRUSMODELINCURREDTRANSACTION_B2
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALLIANT_CLAIMS_ASTRUS_RPT
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f1e2d3c4-b5a6-4b2b-8a7c-6d5e4f3b2a1c
+          stepCounter: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: NUMBER(19,0)
+        description: ""
+        name: ACA_EXPERIENCE_TRANSACTION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a1b2c3d4-e5f6-4c1b-8a7c-6d5e4f3b2a1c
+                stepCounter: 4f23b7a1-8d9e-4c5b-a1f9-317424c13a29
+              - columnCounter: d1c2b3a4-e5f6-441b-8d7c-6f5e4d3c2b1a
+                stepCounter: 9b8c7d6e-5f4a-431b-8c7d-6e5f4a3b2c1d
+              - columnCounter: a1b2c3d4-e5f6-481b-8a7c-6d5e4f3b2a1c
+                stepCounter: 3b2a1d4c-e5f6-471b-8d7c-6f5e4d3c2b1a
+            transform: "ROW_NUMBER() OVER (ORDER BY C.ACA_CLAIM_ID ASC, M.ACA_RESERVE_TYPE_ID ASC) + I.ACA_EXPERIENCE_TRANSACTION_ID"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a1b2c3d4-e5f6-4c2b-8c7d-6e5f4a3b2c1d
+          stepCounter: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: ACA_CLAIM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a1b2c3d4-e5f6-4c1b-8a7c-6d5e4f3b2a1c
+                stepCounter: 4f23b7a1-8d9e-4c5b-a1f9-317424c13a29
+            transform: "C.ACA_CLAIM_ID"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b1a2c3d4-e5f6-4d2b-8d7c-6f5e4d3c2b1a
+          stepCounter: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: ACA_RESERVE_TYPE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d1c2b3a4-e5f6-441b-8d7c-6f5e4d3c2b1a
+                stepCounter: 9b8c7d6e-5f4a-431b-8c7d-6e5f4a3b2c1d
+            transform: "M.ACA_RESERVE_TYPE_ID"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c1b2a3d4-e5f6-4e2b-8a7c-6d5e4f3b2a1c
+          stepCounter: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: NUMBER(10,0)
+        description: ""
+        name: ACA_DATE_ID_EXPERIENCE_TRANSACTION_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c1b2a3d4-e5f6-4e1b-8d7c-6f5e4d3c2b1a
+                stepCounter: 4f23b7a1-8d9e-4c5b-a1f9-317424c13a29
+            transform: "CAST(TO_CHAR(C.CLAIM_DATE, 'YYYYMMDD') AS NUMBER(10,0))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1c2b3a4-e5f6-4f2b-8c7d-6e5f4a3b2c1d
+          stepCounter: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: ACA_DATE_TYPE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(NULL AS NUMBER)"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e1d2c3b4-f5e6-403b-8d7c-6f5e4d3c2b1a
+          stepCounter: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SOURCE_SYSTEM_CLAIM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d1c2b3a4-e5f6-4f1b-8a7c-6d5e4f3b2a1c
+                stepCounter: 4f23b7a1-8d9e-4c5b-a1f9-317424c13a29
+            transform: "C.SOURCE_SYSTEM_CLAIM_ID"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f1e2d3c4-b5a6-413b-8a7c-6d5e4f3b2a1c
+          stepCounter: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: DATE
+        description: ""
+        name: EXPERIENCE_TRANSACTION_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c1b2a3d4-e5f6-4e1b-8d7c-6f5e4d3c2b1a
+                stepCounter: 4f23b7a1-8d9e-4c5b-a1f9-317424c13a29
+            transform: "C.CLAIM_DATE"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a1b2c3d4-e5f6-423b-8c7d-6e5f4a3b2c1d
+          stepCounter: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: TRANSACTION_SEQUENCE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(NULL AS NUMBER)"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b1a2c3d4-e5f6-433b-8d7c-6f5e4d3c2b1a
+          stepCounter: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: RECIPIENT_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(NULL AS VARCHAR)"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c1b2a3d4-e5f6-443b-8a7c-6d5e4f3b2a1c
+          stepCounter: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DATE_TYPE_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(NULL AS VARCHAR)"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1c2b3a4-e5f6-453b-8c7d-6e5f4a3b2c1d
+          stepCounter: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DATE_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(NULL AS VARCHAR)"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e1d2c3b4-f5e6-463b-8d7c-6f5e4d3c2b1a
+          stepCounter: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PAYMENT_TYPE_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(NULL AS VARCHAR)"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f1e2d3c4-b5a6-473b-8a7c-6d5e4f3b2a1c
+          stepCounter: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: COVERAGE_GROUP_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(NULL AS VARCHAR)"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a1b2c3d4-e5f6-483b-8c7d-6e5f4a3b2c1d
+          stepCounter: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: RESERVE_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f1e2d3c4-b5a6-461b-8c7d-6e5f4a3b2c1d
+                stepCounter: 9b8c7d6e-5f4a-431b-8c7d-6e5f4a3b2c1d
+            transform: "M.RESERVE_TYPE"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b1a2c3d4-e5f6-493b-8d7c-6f5e4d3c2b1a
+          stepCounter: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: NUMBER(19,2)
+        description: ""
+        name: EXPERIENCE_AMOUNT_BY_RESERVE_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(0.00 AS NUMBER(19, 2))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c1b2a3d4-e5f6-4a3b-8a7c-6d5e4f3b2a1c
+          stepCounter: 1a2b3c4d-e5f6-4a2b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: ACA_SOURCE_SYSTEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e1d2c3b4-f5e6-4a1b-8c7d-6e5f4a3b2c1d
+                stepCounter: 4f23b7a1-8d9e-4c5b-a1f9-317424c13a29
+            transform: "C.ACA_SOURCE_SYSTEM_ID"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          C: C
+          I: I
+          M: M
+          T: T
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ALLIANT_CLAIMS_ASTRUS_DBO
+            nodeName: ACA_CLAIM
+          - locationName: ALLIANT_CLAIMS_ASTRUS_RPT
+            nodeName: M
+          - locationName: ALLIANT_CLAIMS_ASTRUS_DBO
+            nodeName: ACA_EXPERIENCE_TRANSACTION
+          - locationName: ALLIANT_CLAIMS_ASTRUS_RPT
+            nodeName: I
+        join:
+          joinCondition: |
+            FROM {{ ref('ALLIANT_CLAIMS_ASTRUS_DBO', 'ACA_CLAIM') }} AS C
+            INNER JOIN {{ ref('ALLIANT_CLAIMS_ASTRUS_RPT', 'M') }} AS M
+              ON M.ACA_SOURCE_SYSTEM_ID = C.ACA_SOURCE_SYSTEM_ID
+            LEFT JOIN {{ ref('ALLIANT_CLAIMS_ASTRUS_DBO', 'ACA_EXPERIENCE_TRANSACTION') }} AS T
+              ON T.ACA_CLAIM_ID = C.ACA_CLAIM_ID AND T.ACA_RESERVE_TYPE_ID = M.ACA_RESERVE_TYPE_ID
+            CROSS JOIN {{ ref('ALLIANT_CLAIMS_ASTRUS_RPT', 'I') }} AS I
+            WHERE T.ACA_CLAIM_ID IS NULL AND (C.DELETED_FLAG = 'N' OR C.DELETED_FLAG IS NULL)
+        name: ASTRUSMODELINCURREDTRANSACTION_B2
+        noLinkRefs: []
+  name: ASTRUSMODELINCURREDTRANSACTION_B2
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,272 @@
+fileVersion: 1
+id: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+name: ACA_EXPERIENCE_TRANSACTION
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: ALLIANT_CLAIMS_ASTRUS_DBO
+  metadata:
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 82a5c9f1-32eb-4d51-9e8c-8f12c8a74b0d
+          stepCounter: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: ACA_EXPERIENCE_TRANSACTION_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fb8e1a74-d4c2-491a-b6e5-c1e089d73284
+          stepCounter: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: ACA_CLAIM_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 79d413b5-3d5f-4a0b-8d19-948f72c1e6b3
+          stepCounter: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: ACA_RESERVE_TYPE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cd81f092-28e4-419b-ba2c-5c6a1e843f9a
+          stepCounter: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: ACA_DATE_ID_EXPERIENCE_TRANSACTION_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 35e1d48c-79a2-4a4b-91c6-2df7e8105c3b
+          stepCounter: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: ACA_DATE_TYPE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f1e2c90a-1b4d-456a-98c3-d7a8e5b410f9
+          stepCounter: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SOURCE_SYSTEM_CLAIM_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 29a1b8c3-4d5e-491b-8c6f-a1e4c8d5b2f3
+          stepCounter: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: EXPERIENCE_TRANSACTION_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e8d4c1b2-5a9f-431b-9a8c-7e6d5f4b3c2a
+          stepCounter: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: TRANSACTION_SEQUENCE_NUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c3b2a1d4-e5f6-491b-8a7c-6d5e4f3b2a1c
+          stepCounter: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: RECIPIENT_NUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b1a2c3d4-e5f6-491b-8c7d-6e5f4a3b2c1d
+          stepCounter: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: DATE_TYPE_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a1b2c3d4-e5f6-491b-8d7c-6f5e4d3c2b1a
+          stepCounter: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: DATE_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4c3b2a1-e5f6-491b-8a7c-6d5e4f3b2a1c
+          stepCounter: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: PAYMENT_TYPE_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f6e5d4c3-b2a1-491b-8c7d-6e5f4a3b2c1d
+          stepCounter: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: COVERAGE_GROUP_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e5f6d4c3-b2a1-491b-8d7c-6f5e4d3c2b1a
+          stepCounter: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: RESERVE_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4c3b2a1-e5f6-4a1b-8a7c-6d5e4f3b2a1c
+          stepCounter: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+        config: {}
+        dataType: NUMBER(19,2)
+        defaultValue: ""
+        description: ""
+        name: EXPERIENCE_AMOUNT_BY_RESERVE_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c3b2a1d4-e5f6-4b1b-8c7d-6e5f4a3b2c1d
+          stepCounter: a63d12d4-3bc8-4e8c-a1f9-317424c13a29
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: ACA_SOURCE_SYSTEM_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: ACA_EXPERIENCE_TRANSACTION
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

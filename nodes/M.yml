@@ -1,0 +1,83 @@
+fileVersion: 1
+id: 9b8c7d6e-5f4a-431b-8c7d-6e5f4a3b2c1d
+name: M
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALLIANT_CLAIMS_ASTRUS_RPT
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1c2b3a4-e5f6-441b-8d7c-6f5e4d3c2b1a
+          stepCounter: 9b8c7d6e-5f4a-431b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: ACA_RESERVE_TYPE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f1e2d3c4-b5a6-491b-8a7c-6d5e4f3b2a1c
+                stepCounter: 6e5f4d3c-2b1a-491b-8c7d-6e5f4a3b2c1d
+            transform: "ACA_RESERVE_TYPE_ID"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e1d2c3b4-f5e6-451b-8a7c-6d5e4f3b2a1c
+          stepCounter: 9b8c7d6e-5f4a-431b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: ACA_SOURCE_SYSTEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a1b2c3d4-e5f6-411b-8c7d-6e5f4a3b2c1d
+                stepCounter: 6e5f4d3c-2b1a-491b-8c7d-6e5f4a3b2c1d
+            transform: "ACA_SOURCE_SYSTEM_ID"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f1e2d3c4-b5a6-461b-8c7d-6e5f4a3b2c1d
+          stepCounter: 9b8c7d6e-5f4a-431b-8c7d-6e5f4a3b2c1d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: RESERVE_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b1a2c3d4-e5f6-421b-8d7c-6f5e4d3c2b1a
+                stepCounter: 6e5f4d3c-2b1a-491b-8c7d-6e5f4a3b2c1d
+              - columnCounter: c1b2a3d4-e5f6-431b-8a7c-6d5e4f3b2a1c
+                stepCounter: 6e5f4d3c-2b1a-491b-8c7d-6e5f4a3b2c1d
+            transform: "COALESCE(RESERVE_TYPE, TRANSACTION_GROUP)"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ALLIANT_CLAIMS_ASTRUS_REF
+            nodeName: ACA_RESERVE_TYPE_MAPPING
+        join:
+          joinCondition: FROM {{ ref('ALLIANT_CLAIMS_ASTRUS_REF', 'ACA_RESERVE_TYPE_MAPPING') }} GROUP BY ACA_RESERVE_TYPE_ID, ACA_SOURCE_SYSTEM_ID, COALESCE(RESERVE_TYPE, TRANSACTION_GROUP)
+        name: M
+        noLinkRefs: []
+  name: M
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
