@@ -1,0 +1,112 @@
+fileVersion: 1
+id: f3b1a8d4-2e97-4c5b-9d6a-814e3b2f70c9
+name: TEMP_TRANSACTION
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALLIANT_CLAIMS_ASTRUS_DBO
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e7f8a9b0-c1d2-4b3e-f5a6-b7c8d9e0f1a2
+          stepCounter: f3b1a8d4-2e97-4c5b-9d6a-814e3b2f70c9
+        config: {}
+        dataType: NUMBER(10,0)
+        description: ""
+        name: ACA_CLAIM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a1b2c3d4-e5f6-47a8-b9c0-d1e2f3a4b5c6
+                stepCounter: 2f9d8a43-e617-485c-a1d2-09c3b8f147a2
+            transform: "ACA_CLAIM_ID"
+        transform: "ACA_CLAIM_ID"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8a9b0c1-d2e3-4c4f-a6b7-c8d9e0f1a2b3
+          stepCounter: f3b1a8d4-2e97-4c5b-9d6a-814e3b2f70c9
+        config: {}
+        dataType: NUMBER(3,0)
+        description: ""
+        name: TRANSACTION_TYPE_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2c3d4e5-f6a7-48b9-c0d1-e2f3a4b5c6d7
+                stepCounter: 2f9d8a43-e617-485c-a1d2-09c3b8f147a2
+            transform: "TRANSACTION_TYPE_CODE"
+        transform: "TRANSACTION_TYPE_CODE"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a9b0c1d2-e3f4-4d5a-b7c8-d9e0f1a2b3c4
+          stepCounter: f3b1a8d4-2e97-4c5b-9d6a-814e3b2f70c9
+        config: {}
+        dataType: DATE
+        description: ""
+        name: TRANSACTION_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c3d4e5f6-a7b8-49c0-d1e2-f3a4b5c6d7e8
+                stepCounter: 2f9d8a43-e617-485c-a1d2-09c3b8f147a2
+            transform: "TRANSACTION_DATE"
+        transform: "TRANSACTION_DATE"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b0c1d2e3-f4a5-4e6b-c8d9-e0f1a2b3c4d5
+          stepCounter: f3b1a8d4-2e97-4c5b-9d6a-814e3b2f70c9
+        config: {}
+        dataType: NUMBER(19,2)
+        description: ""
+        name: TRANSACTION_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d4e5f6a7-b8c9-4a0d-e2f3-a4b5c6d7e8f9
+                stepCounter: 2f9d8a43-e617-485c-a1d2-09c3b8f147a2
+            transform: "TRANSACTION_AMOUNT"
+        transform: "TRANSACTION_AMOUNT"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ALLIANT_CLAIMS_ASTRUS_DBO
+            nodeName: TEMP_TRANSACTION_BRANCH_1
+          - locationName: ALLIANT_CLAIMS_ASTRUS_DBO
+            nodeName: TEMP_TRANSACTION_BRANCH_2
+          - locationName: ALLIANT_CLAIMS_ASTRUS_DBO
+            nodeName: TEMP_TRANSACTION_BRANCH_3
+          - locationName: ALLIANT_CLAIMS_ASTRUS_DBO
+            nodeName: TEMP_TRANSACTION_BRANCH_4
+        join:
+          joinCondition: |-
+            FROM {{ ref('ALLIANT_CLAIMS_ASTRUS_DBO', 'TEMP_TRANSACTION_BRANCH_1') }}
+            UNION ALL
+            SELECT ACA_CLAIM_ID, TRANSACTION_TYPE_CODE, TRANSACTION_DATE, TRANSACTION_AMOUNT FROM {{ ref('ALLIANT_CLAIMS_ASTRUS_DBO', 'TEMP_TRANSACTION_BRANCH_2') }}
+            UNION ALL
+            SELECT ACA_CLAIM_ID, TRANSACTION_TYPE_CODE, TRANSACTION_DATE, TRANSACTION_AMOUNT FROM {{ ref('ALLIANT_CLAIMS_ASTRUS_DBO', 'TEMP_TRANSACTION_BRANCH_3') }}
+            UNION ALL
+            SELECT ACA_CLAIM_ID, TRANSACTION_TYPE_CODE, TRANSACTION_DATE, TRANSACTION_AMOUNT FROM {{ ref('ALLIANT_CLAIMS_ASTRUS_DBO', 'TEMP_TRANSACTION_BRANCH_4') }}
+        name: TEMP_TRANSACTION
+        noLinkRefs: []
+  name: TEMP_TRANSACTION
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,74 @@
+fileVersion: 1
+id: 8d9ea3b1-4f2c-47a2-9b3e-1085c3b06e41
+name: ASTRUSMODELCLAIMSTATUS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: ALLIANT_CLAIMS_ASTRUS_RPT
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01e7a3b4-9c2d-45f8-b1a6-3d8e2f9c4b7a
+          stepCounter: 8d9ea3b1-4f2c-47a2-9b3e-1085c3b06e41
+        config: {}
+        dataType: NUMBER(10,0)
+        defaultValue: ""
+        description: ""
+        name: ACA_CLAIM_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4c8b1a9f-3d2e-475b-a6c3-9f8e1d2b4a5c
+          stepCounter: 8d9ea3b1-4f2c-47a2-9b3e-1085c3b06e41
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: SOURCE_SYSTEM_TRANSACTION_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2a9f3c1b-7d8e-46b5-a1c3-8f2e4d9b6a7c
+          stepCounter: 8d9ea3b1-4f2c-47a2-9b3e-1085c3b06e41
+        config: {}
+        dataType: VARCHAR(2)
+        defaultValue: ""
+        description: ""
+        name: CLAIM_STATUS_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: ASTRUSMODELCLAIMSTATUS
+  overrideSQL: false
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

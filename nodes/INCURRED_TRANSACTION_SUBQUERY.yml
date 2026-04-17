@@ -1,0 +1,173 @@
+fileVersion: 1
+id: 1f7b9e3d-2c8a-45b6-9d4a-a1b2c3d4e5f6
+name: INCURRED_TRANSACTION_SUBQUERY
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALLIANT_CLAIMS_ASTRUS_DBO
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e9f0a1b2-c3d4-4b5e-f7a8-b9c0d1e2f3a4
+          stepCounter: 1f7b9e3d-2c8a-45b6-9d4a-a1b2c3d4e5f6
+        config: {}
+        dataType: NUMBER(10,0)
+        description: ""
+        name: ACA_CLAIM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c9d0e1f2-a3b4-48c5-d6e7-f8a9b0c1d2e3
+                stepCounter: f6b713ce-948a-49c5-84e0-3dc912a5108f
+            transform: "ACA_CLAIM_ID"
+        transform: "ACA_CLAIM_ID"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f0a1b2c3-d4e5-4c6f-a8b9-c0d1e2f3a4b5
+          stepCounter: 1f7b9e3d-2c8a-45b6-9d4a-a1b2c3d4e5f6
+        config: {}
+        dataType: NUMBER(19,2)
+        description: ""
+        name: INCURRED_BI
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "SUM(IFF(RESERVE_TYPE = 'B. I.', EXPERIENCE_AMOUNT_BY_RESERVE_TYPE, 0))"
+        transform: "SUM(IFF(RESERVE_TYPE = 'B. I.', EXPERIENCE_AMOUNT_BY_RESERVE_TYPE, 0))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a1b2c3d4-e5f6-4d7a-b9c0-d1e2f3a4b5c6
+          stepCounter: 1f7b9e3d-2c8a-45b6-9d4a-a1b2c3d4e5f6
+        config: {}
+        dataType: NUMBER(19,2)
+        description: ""
+        name: INCURRED_COLLISION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "SUM(IFF(RESERVE_TYPE = 'COLLISION', EXPERIENCE_AMOUNT_BY_RESERVE_TYPE, 0))"
+        transform: "SUM(IFF(RESERVE_TYPE = 'COLLISION', EXPERIENCE_AMOUNT_BY_RESERVE_TYPE, 0))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b2c3d4e5-f6a7-4e8b-c0d1-e2f3a4b5c6d7
+          stepCounter: 1f7b9e3d-2c8a-45b6-9d4a-a1b2c3d4e5f6
+        config: {}
+        dataType: NUMBER(19,2)
+        description: ""
+        name: INCURRED_COMP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "SUM(IFF(RESERVE_TYPE = 'COMP', EXPERIENCE_AMOUNT_BY_RESERVE_TYPE, 0))"
+        transform: "SUM(IFF(RESERVE_TYPE = 'COMP', EXPERIENCE_AMOUNT_BY_RESERVE_TYPE, 0))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c3d4e5f6-a7b8-4f9c-d1e2-f3a4b5c6d7e8
+          stepCounter: 1f7b9e3d-2c8a-45b6-9d4a-a1b2c3d4e5f6
+        config: {}
+        dataType: NUMBER(19,2)
+        description: ""
+        name: INCURRED_EXPENSE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "SUM(IFF(RESERVE_TYPE = 'EXPENSE', EXPERIENCE_AMOUNT_BY_RESERVE_TYPE, 0))"
+        transform: "SUM(IFF(RESERVE_TYPE = 'EXPENSE', EXPERIENCE_AMOUNT_BY_RESERVE_TYPE, 0))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4e5f6a7-b8c9-4a0d-e2f3-a4b5c6d7e8f9
+          stepCounter: 1f7b9e3d-2c8a-45b6-9d4a-a1b2c3d4e5f6
+        config: {}
+        dataType: NUMBER(19,2)
+        description: ""
+        name: INCURRED_INDEMNITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "SUM(IFF(RESERVE_TYPE = 'INDEMNITY', EXPERIENCE_AMOUNT_BY_RESERVE_TYPE, 0))"
+        transform: "SUM(IFF(RESERVE_TYPE = 'INDEMNITY', EXPERIENCE_AMOUNT_BY_RESERVE_TYPE, 0))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e5f6a7b8-c9d0-4b1e-f3a4-b5c6d7e8f9a0
+          stepCounter: 1f7b9e3d-2c8a-45b6-9d4a-a1b2c3d4e5f6
+        config: {}
+        dataType: NUMBER(19,2)
+        description: ""
+        name: INCURRED_MEDICAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "SUM(IFF(RESERVE_TYPE = 'MEDICAL', EXPERIENCE_AMOUNT_BY_RESERVE_TYPE, 0))"
+        transform: "SUM(IFF(RESERVE_TYPE = 'MEDICAL', EXPERIENCE_AMOUNT_BY_RESERVE_TYPE, 0))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f6a7b8c9-d0e1-4c2f-a4b5-c6d7e8f9a0b1
+          stepCounter: 1f7b9e3d-2c8a-45b6-9d4a-a1b2c3d4e5f6
+        config: {}
+        dataType: NUMBER(19,2)
+        description: ""
+        name: PD_MEDICAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "SUM(IFF(RESERVE_TYPE = 'P. D.', EXPERIENCE_AMOUNT_BY_RESERVE_TYPE, 0))"
+        transform: "SUM(IFF(RESERVE_TYPE = 'P. D.', EXPERIENCE_AMOUNT_BY_RESERVE_TYPE, 0))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a7b8c9d0-e1f2-4d3a-b5c6-d7e8f9a0b1c2
+          stepCounter: 1f7b9e3d-2c8a-45b6-9d4a-a1b2c3d4e5f6
+        config: {}
+        dataType: NUMBER(19,2)
+        description: ""
+        name: REHAB_MEDICAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "SUM(IFF(RESERVE_TYPE = 'REHAB', EXPERIENCE_AMOUNT_BY_RESERVE_TYPE, 0))"
+        transform: "SUM(IFF(RESERVE_TYPE = 'REHAB', EXPERIENCE_AMOUNT_BY_RESERVE_TYPE, 0))"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b8c9d0e1-f2a3-4e4b-c6d7-e8f9a0b1c2d3
+          stepCounter: 1f7b9e3d-2c8a-45b6-9d4a-a1b2c3d4e5f6
+        config: {}
+        dataType: NUMBER(19,2)
+        description: ""
+        name: INCURRED_TOTAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a3b4c5d6-e7f8-4af9-b0c1-d2e3f4a5b6c7
+                stepCounter: f6b713ce-948a-49c5-84e0-3dc912a5108f
+            transform: "SUM(EXPERIENCE_AMOUNT_BY_RESERVE_TYPE)"
+        transform: "SUM(EXPERIENCE_AMOUNT_BY_RESERVE_TYPE)"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ALLIANT_CLAIMS_ASTRUS_RPT
+            nodeName: ASTRUSMODELINCURREDTRANSACTION
+        join:
+          joinCondition: FROM {{ ref('ALLIANT_CLAIMS_ASTRUS_RPT', 'ASTRUSMODELINCURREDTRANSACTION') }} WHERE RESERVE_TYPE <> 'RECOVERY' GROUP BY ACA_CLAIM_ID
+        name: INCURRED_TRANSACTION_SUBQUERY
+        noLinkRefs: []
+  name: INCURRED_TRANSACTION_SUBQUERY
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
