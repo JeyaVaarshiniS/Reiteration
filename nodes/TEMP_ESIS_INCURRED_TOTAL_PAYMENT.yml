@@ -1,0 +1,142 @@
+fileVersion: 1
+id: c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f
+name: TEMP_ESIS_INCURRED_TOTAL_PAYMENT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALLIANT_CLAIMS_ASTRUS_STAGE_DBO
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a
+          stepCounter: c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f
+        config: {}
+        dataType: VARCHAR(30)
+        description: ""
+        name: SOURCE_SYSTEM_CLAIM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a
+                stepCounter: b84f3e1a-96c2-4a0b-81d4-1a3b5c7d8e9f
+            transform: ""
+        transform: "PMT.SOURCE_SYSTEM_CLAIM_ID"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a9b
+          stepCounter: c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f
+        config: {}
+        dataType: NUMBER(10,0)
+        description: ""
+        name: ACA_RESERVE_TYPE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b
+                stepCounter: b84f3e1a-96c2-4a0b-81d4-1a3b5c7d8e9f
+            transform: ""
+        transform: "PMT.ACA_RESERVE_TYPE_ID"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b0c
+          stepCounter: c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f
+        config: {}
+        dataType: DATE
+        description: ""
+        name: TRANSACTION_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f2a3b4c5-d6e7-4f8a-9b0c-1d2e3f4a5b6c
+                stepCounter: d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a
+            transform: ""
+        transform: "C.TRANSACTION_DATE"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d
+          stepCounter: c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f
+        config: {}
+        dataType: CHAR(2)
+        description: ""
+        name: COVERAGE_GROUP_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b4c5d6e7-f8a9-4b0c-1d2e-3f4a5b6c7d8e
+                stepCounter: b84f3e1a-96c2-4a0b-81d4-1a3b5c7d8e9f
+            transform: ""
+        transform: "MAX(PMT.COVERAGE_GROUP_CODE)"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b8c9d0e1-f2a3-4b4c-5d6e-7f8a9b0c1d2e
+          stepCounter: c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: RESERVE_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c5d6e7f8-a9b0-4c1d-2e3f-4a5b6c7d8e9f
+                stepCounter: b84f3e1a-96c2-4a0b-81d4-1a3b5c7d8e9f
+            transform: ""
+        transform: "MAX(PMT.RESERVE_TYPE)"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f
+          stepCounter: c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f
+        config: {}
+        dataType: NUMBER(19,2)
+        description: ""
+        name: PAYMENT_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f8a9b0c1-d2e3-4f4a-5b6c-7d8e9f0a1b2c
+                stepCounter: b84f3e1a-96c2-4a0b-81d4-1a3b5c7d8e9f
+            transform: ""
+        transform: "SUM(PMT.PAYMENT_AMOUNT_BY_RESERVE_TYPE)"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          PMT: PMT
+          C: C
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ALLIANT_CLAIMS_ASTRUS_DBO
+            nodeName: ACA_PAYMENT_TRANSACTION
+          - locationName: ALLIANT_CLAIMS_ASTRUS_STAGE_DBO
+            nodeName: TEMP_ESIS_INCURRED_NEW_TRANSACTION
+          - locationName: ALLIANT_CLAIMS_ASTRUS_DBO
+            nodeName: ACA_SOURCE_SYSTEM
+        join:
+          joinCondition: |-
+            FROM {{ ref('ALLIANT_CLAIMS_ASTRUS_DBO', 'ACA_PAYMENT_TRANSACTION') }} AS PMT
+            INNER JOIN {{ ref('ALLIANT_CLAIMS_ASTRUS_STAGE_DBO', 'TEMP_ESIS_INCURRED_NEW_TRANSACTION') }} AS C
+              ON C.SOURCE_SYSTEM_CLAIM_ID = PMT.SOURCE_SYSTEM_CLAIM_ID
+             AND C.ACA_RESERVE_TYPE_ID = PMT.ACA_RESERVE_TYPE_ID
+             AND PMT.TRANSACTION_DATE <= C.TRANSACTION_DATE
+            WHERE PMT.ACA_SOURCE_SYSTEM_ID = (SELECT ACA_SOURCE_SYSTEM_ID FROM {{ ref('ALLIANT_CLAIMS_ASTRUS_DBO', 'ACA_SOURCE_SYSTEM') }} WHERE SOURCE_SYSTEM = 'ESIS')
+            GROUP BY PMT.SOURCE_SYSTEM_CLAIM_ID, PMT.ACA_RESERVE_TYPE_ID, C.TRANSACTION_DATE
+        name: TEMP_ESIS_INCURRED_TOTAL_PAYMENT
+        noLinkRefs: []
+  name: TEMP_ESIS_INCURRED_TOTAL_PAYMENT
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

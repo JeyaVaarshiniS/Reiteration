@@ -1,0 +1,68 @@
+fileVersion: 1
+id: f8e1a3b5-2c4d-4e6f-9a1b-3c5d7e8f1a2b
+name: ACA_POLICY
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: ALLIANT_CLAIMS_ASTRUS_DBO
+  metadata:
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b
+          stepCounter: f8e1a3b5-2c4d-4e6f-9a1b-3c5d7e8f1a2b
+        config: {}
+        dataType: NUMBER(10,0)
+        description: ""
+        name: ACA_POLICY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2a3b4c5-d6e7-4f8a-9b0c-1d2e3f4a5b6c
+          stepCounter: f8e1a3b5-2c4d-4e6f-9a1b-3c5d7e8f1a2b
+        config: {}
+        dataType: BINARY(16)
+        description: ""
+        name: SOURCE_SYSTEM_POLICY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d
+          stepCounter: f8e1a3b5-2c4d-4e6f-9a1b-3c5d7e8f1a2b
+        config: {}
+        dataType: VARCHAR(30)
+        description: ""
+        name: POLICY_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b4c5d6e7-f8a9-4b0c-1d2e-3f4a5b6c7d8e
+          stepCounter: f8e1a3b5-2c4d-4e6f-9a1b-3c5d7e8f1a2b
+        config: {}
+        dataType: DATE
+        description: ""
+        name: EFFECTIVE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: ACA_POLICY
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

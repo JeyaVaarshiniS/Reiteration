@@ -1,0 +1,133 @@
+fileVersion: 1
+id: d47a8c1f-3b9e-4d5a-b61c-9e2f4a5c8b7d
+name: ACA_RECOVERY_TRANSACTION
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: ALLIANT_CLAIMS_ASTRUS_DBO
+  metadata:
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a9b0c1d2-e3f4-4a5b-6c7d-8e9f0a1b2c3d
+          stepCounter: d47a8c1f-3b9e-4d5a-b61c-9e2f4a5c8b7d
+        config: {}
+        dataType: VARCHAR(30)
+        description: ""
+        name: SOURCE_SYSTEM_CLAIM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b0c1d2e3-f4a5-4b6c-7d8e-9f0a1b2c3d4e
+          stepCounter: d47a8c1f-3b9e-4d5a-b61c-9e2f4a5c8b7d
+        config: {}
+        dataType: NUMBER(10,0)
+        description: ""
+        name: ACA_RESERVE_TYPE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c1d2e3f4-a5b6-4c7d-8e9f-0a1b2c3d4e5f
+          stepCounter: d47a8c1f-3b9e-4d5a-b61c-9e2f4a5c8b7d
+        config: {}
+        dataType: DATE
+        description: ""
+        name: RECOVERY_TRANSACTION_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d2e3f4a5-b6c7-4d8e-9f0a-1b2c3d4e5f6a
+          stepCounter: d47a8c1f-3b9e-4d5a-b61c-9e2f4a5c8b7d
+        config: {}
+        dataType: NUMBER(10,0)
+        description: ""
+        name: ACA_DATE_ID_RECOVERY_TRANSACTION_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e3f4a5b6-c7d8-4e9f-0a1b-2c3d4e5f6a7b
+          stepCounter: d47a8c1f-3b9e-4d5a-b61c-9e2f4a5c8b7d
+        config: {}
+        dataType: CHAR(2)
+        description: ""
+        name: COVERAGE_GROUP_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f4a5b6c7-d8e9-4f0a-1b2c-3d4e5f6a7b8c
+          stepCounter: d47a8c1f-3b9e-4d5a-b61c-9e2f4a5c8b7d
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: RESERVE_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a5b6c7d8-e9f0-4a1b-2c3d-4e5f6a7b8c9d
+          stepCounter: d47a8c1f-3b9e-4d5a-b61c-9e2f4a5c8b7d
+        config: {}
+        dataType: NUMBER(10,0)
+        description: ""
+        name: ACA_SOURCE_SYSTEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b6c7d8e9-f0a1-4b2c-3d4e-5f6a7b8c9d0e
+          stepCounter: d47a8c1f-3b9e-4d5a-b61c-9e2f4a5c8b7d
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        description: ""
+        name: ACA_DATE_UPDATED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c7d8e9f0-a1b2-4c3d-4e5f-6a7b8c9d0e1f
+          stepCounter: d47a8c1f-3b9e-4d5a-b61c-9e2f4a5c8b7d
+        config: {}
+        dataType: NUMBER(19,2)
+        description: ""
+        name: RECOVERY_AMOUNT_BY_RESERVE_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: ACA_RECOVERY_TRANSACTION
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

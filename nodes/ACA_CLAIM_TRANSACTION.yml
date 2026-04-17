@@ -1,0 +1,68 @@
+fileVersion: 1
+id: a2f4c6b8-1d3e-4f5a-9c7b-8e1d2f4a5c6b
+name: ACA_CLAIM_TRANSACTION
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: ALLIANT_CLAIMS_ASTRUS_DBO
+  metadata:
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d
+          stepCounter: a2f4c6b8-1d3e-4f5a-9c7b-8e1d2f4a5c6b
+        config: {}
+        dataType: VARCHAR(30)
+        description: ""
+        name: SOURCE_SYSTEM_CLAIM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b8c9d0e1-f2a3-4b4c-5d6e-7f8a9b0c1d2e
+          stepCounter: a2f4c6b8-1d3e-4f5a-9c7b-8e1d2f4a5c6b
+        config: {}
+        dataType: CHAR(1)
+        description: ""
+        name: ACA_CURRENT_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f
+          stepCounter: a2f4c6b8-1d3e-4f5a-9c7b-8e1d2f4a5c6b
+        config: {}
+        dataType: NUMBER(10,0)
+        description: ""
+        name: ACA_POLICY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a
+          stepCounter: a2f4c6b8-1d3e-4f5a-9c7b-8e1d2f4a5c6b
+        config: {}
+        dataType: NUMBER(10,0)
+        description: ""
+        name: ACA_CLAIM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: ACA_CLAIM_TRANSACTION
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
