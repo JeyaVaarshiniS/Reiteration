@@ -1,0 +1,179 @@
+fileVersion: 1
+id: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+name: STG_TMP_ACCOUNT_STRUCTURE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DBSHIFT
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f0c4e8d-8b6c-4f9a-a1b3-5c8e7f6a4b2d
+          stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR(6)
+        description: ""
+        name: CLIENT_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1e0f4d7a-8b6c-4f9a-a1b3-5c8e7f6a4b2d
+                stepCounter: 8f9a0b1c-2d3e-4f3f-a1b3-5c8e7f6a4b2d
+            transform: LVL.CLIENT
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d3e4f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+          stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: UNIT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3a2c286a-743a-44e2-8b48-3162b7193f2f
+                stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+            transform: PD.UNIT_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3e4f3f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+          stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: SITE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5d13e7f4-88d4-4861-9c3a-96c21e3f8983
+                stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+            transform: PD.LEVEL
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4f3f3f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+          stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: INSURED_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3a2c286a-743a-44e2-8b48-3162b7193f2f
+                stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+            transform: COALESCE(NULLIF(TRIM(INS.UNIT_ID), ''), '-1')
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5f3f3f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+          stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR(150)
+        description: ""
+        name: INSURED_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9e1c0d5a-1b2c-4e8c-a3d8-348f98e7d2e1
+                stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+            transform: NULLIF(TRIM(INS.UNIT_NAME), '')
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6f3f3f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+          stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: SUBSIDIARY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3a2c286a-743a-44e2-8b48-3162b7193f2f
+                stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+            transform: COALESCE(NULLIF(TRIM(SUB.UNIT_ID), ''), '-1')
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f3f3f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+          stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR(150)
+        description: ""
+        name: SUBSIDIARY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9e1c0d5a-1b2c-4e8c-a3d8-348f98e7d2e1
+                stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+            transform: NULLIF(TRIM(SUB.UNIT_NAME), '')
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8f3f3f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+          stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: LOCATION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3a2c286a-743a-44e2-8b48-3162b7193f2f
+                stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+            transform: COALESCE(NULLIF(TRIM(PD.UNIT_ID), ''), '-1')
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9f3f3f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+          stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR(150)
+        description: ""
+        name: LOCATION_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9e1c0d5a-1b2c-4e8c-a3d8-348f98e7d2e1
+                stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+            transform: NULLIF(TRIM(PD.UNIT_NAME), '')
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ACA_PYRAMID: PD
+          VW_REPORTING_UNIT_LEVEL: LVL
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DBSHIFT
+            nodeName: ACA_PYRAMID
+          - locationName: DBSHIFT
+            nodeName: VW_REPORTING_UNIT_LEVEL
+          - locationName: DBSHIFT
+            nodeName: VW_TRANSACTION_DATE_FILE
+          - locationName: DBSHIFT
+            nodeName: VW_TRANSACTION_DATE_CURRENT_FILTERED
+        join:
+          joinCondition: |-
+            FROM {{ ref('DBSHIFT', 'ACA_PYRAMID') }} PD
+            INNER JOIN {{ ref('DBSHIFT', 'VW_REPORTING_UNIT_LEVEL') }} LVL ON LVL.CLIENT = PD.CLIENT AND LVL.UNIT_ID = PD.UNIT_ID AND LVL.REPORTING_UNIT_LEVEL = PD.LEVEL
+            LEFT OUTER JOIN {{ ref('DBSHIFT', 'ACA_PYRAMID') }} SUB ON SUB.CLIENT = PD.CLIENT AND NULLIF(TRIM(PD.SUBSIDIARY), '') = NULLIF(TRIM(SUB.SUBSIDIARY), '') AND SUB.LEVEL = '03'
+            LEFT OUTER JOIN {{ ref('DBSHIFT', 'ACA_PYRAMID') }} INS ON INS.CLIENT = PD.CLIENT AND NULLIF(TRIM(PD.INSURED), '') = NULLIF(TRIM(INS.INSURED), '') AND INS.LEVEL = '02'
+            WHERE INS.UNIT_NAME IS NOT NULL AND (SELECT MIN_ACTIVITY_FROM_DATE FROM {{ ref('DBSHIFT', 'VW_TRANSACTION_DATE_FILE') }}) > (SELECT CURRENT_TRANSACTION_DATE FROM {{ ref('DBSHIFT', 'VW_TRANSACTION_DATE_CURRENT_FILTERED') }})
+            GROUP BY 1,2,3,4,5,6,7,8,9
+        name: STG_TMP_ACCOUNT_STRUCTURE
+        noLinkRefs: []
+  name: STG_TMP_ACCOUNT_STRUCTURE
+  overrideSQL: false
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,54 @@
+fileVersion: 1
+id: 1f0c4e8d-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+name: V_ACA_TRANSACTION_DATE_CURRENT
+operation:
+  database: ALLIANT_CLAIMS_ASTRUS
+  deployEnabled: true
+  description: ""
+  locationName: DBSHIFT
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5c8e7f6a-4b2d-4e8d-a1b3-8b6c4d3e1f0c
+          stepCounter: 1f0c4e8d-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: TRANSACTION_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f6a4b2d-5c8e-4f9a-a1b3-8b6c4d3e1f0c
+          stepCounter: 1f0c4e8d-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SOURCE_SYSTEM
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: V_ACA_TRANSACTION_DATE_CURRENT
+  schema: DBO
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

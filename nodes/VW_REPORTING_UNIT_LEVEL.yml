@@ -1,0 +1,83 @@
+fileVersion: 1
+id: 8f9a0b1c-2d3e-4f3f-a1b3-5c8e7f6a4b2d
+name: VW_REPORTING_UNIT_LEVEL
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DBSHIFT
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1e0f4d7a-8b6c-4f9a-a1b3-5c8e7f6a4b2d
+          stepCounter: 8f9a0b1c-2d3e-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CLIENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0f989e2c-3531-4c28-9c16-8c105086d34e
+                stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+            transform: PD.CLIENT
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e8d7c6b-5a4b-4d7a-8b6c-4d3e1f0c4e8d
+          stepCounter: 8f9a0b1c-2d3e-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: UNIT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3a2c286a-743a-44e2-8b48-3162b7193f2f
+                stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+            transform: PD.UNIT_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5c8e7f6a-4b2d-4f3f-a1b3-8b6c4d3e1f0c
+          stepCounter: 8f9a0b1c-2d3e-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: REPORTING_UNIT_LEVEL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5d13e7f4-88d4-4861-9c3a-96c21e3f8983
+                stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+            transform: MAX(PD.LEVEL)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ACA_PYRAMID: PD
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DBSHIFT
+            nodeName: ACA_PYRAMID
+        join:
+          joinCondition: FROM {{ ref('DBSHIFT', 'ACA_PYRAMID') }} PD GROUP BY PD.CLIENT,
+            PD.UNIT_ID
+        name: VW_REPORTING_UNIT_LEVEL
+        noLinkRefs: []
+  name: VW_REPORTING_UNIT_LEVEL
+  overrideSQL: false
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,265 @@
+fileVersion: 1
+id: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+name: ACA_ACCOUNT_STRUCTURE_STAGING_GB
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: false
+  database: ALLIANT_CLAIMS_ASTRUS_STAGE
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DBSHIFT
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a2b3c4d-5e6f-4f3f-a1b3-5c8e7f6a4b2d
+          stepCounter: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SOURCE_SYSTEM_ACCOUNT_STRUCTURE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1f0c4e8d-8b6c-4f9a-a1b3-5c8e7f6a4b2d
+                stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+              - columnCounter: 2d3e4f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+                stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+              - columnCounter: 3e4f3f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+                stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+            transform: MD5(CONCAT_WS('~', TRIM(TMP.CLIENT_NUMBER), TRIM(TMP.UNIT_ID),
+              TRIM(TMP.SITE_NUMBER)))
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2b3c4d5e-6f7a-4f3f-a1b3-5c8e7f6a4b2d
+          stepCounter: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CLIENT_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1f0c4e8d-8b6c-4f9a-a1b3-5c8e7f6a4b2d
+                stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+            transform: TMP.CLIENT_NUMBER
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3c4d5e6f-7a8b-4f3f-a1b3-5c8e7f6a4b2d
+          stepCounter: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: UNIT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2d3e4f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+                stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+            transform: TMP.UNIT_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4d5e6f7a-8b9c-4f3f-a1b3-5c8e7f6a4b2d
+          stepCounter: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SITE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3e4f3f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+                stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+            transform: TMP.SITE_NUMBER
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5e6f7a8b-9c0d-4f3f-a1b3-5c8e7f6a4b2d
+          stepCounter: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DIVISION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4f3f3f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+                stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+            transform: TMP.INSURED_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6f7a8b9c-0d1e-4f3f-a1b3-5c8e7f6a4b2d
+          stepCounter: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DIVISION_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5f3f3f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+                stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+            transform: TMP.INSURED_NAME
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7a8b9c0d-1e2f-4f3f-a1b3-5c8e7f6a4b2d
+          stepCounter: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SUBSIDIARY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6f3f3f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+                stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+            transform: TMP.SUBSIDIARY_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b9c0d1e-2f3a-4f3f-a1b3-5c8e7f6a4b2d
+          stepCounter: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SUBSIDIARY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7f3f3f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+                stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+            transform: TMP.SUBSIDIARY_NAME
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9c0d1e2f-3a4b-4f3f-a1b3-5c8e7f6a4b2d
+          stepCounter: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LOCATION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8f3f3f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+                stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+            transform: TMP.LOCATION_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d1e2f3a-4b5c-4f3f-a1b3-5c8e7f6a4b2d
+          stepCounter: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LOCATION_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9f3f3f3f-a1b3-4f9a-8b6c-4d3e1f0c4e8d
+                stepCounter: 9a0b1c2d-3e4f-4f3f-a1b3-5c8e7f6a4b2d
+            transform: TMP.LOCATION_NAME
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1e2f3a4b-5c6d-4f3f-a1b3-5c8e7f6a4b2d
+          stepCounter: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SOURCE_SYSTEM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "'GB'"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f3a4b5c-6d7e-4f3f-a1b3-5c8e7f6a4b2d
+          stepCounter: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: INT
+        description: ""
+        name: ACA_SOURCE_SYSTEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3262f3a4-681b-4228-a63e-b81b2123a31e
+                stepCounter: 597a7e1f-7b7e-4b47-b2e1-455b55e3962d
+            transform: SS.ACA_SOURCE_SYSTEM_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a4b5c6d-7e8f-4f3f-a1b3-5c8e7f6a4b2d
+          stepCounter: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        description: ""
+        name: ACA_DATE_CREATED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CURRENT_TIMESTAMP()
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4b5c6d7e-8f9a-4f3f-a1b3-5c8e7f6a4b2d
+          stepCounter: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ACA_CREATE_USER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "'SPACA_ACA_ACCOUNT_STRUCTURE_STAGING_GB_INSERT'"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5c6d7e8f-9a0b-4f3f-a1b3-5c8e7f6a4b2d
+          stepCounter: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        description: ""
+        name: ACA_DATE_UPDATED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CURRENT_TIMESTAMP()
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6d7e8f9a-0b1c-4f3f-a1b3-5c8e7f6a4b2d
+          stepCounter: 0b1c2d3e-4f3f-4f3f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ACA_UPDATE_USER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "'SPACA_ACA_ACCOUNT_STRUCTURE_STAGING_GB_INSERT'"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_TMP_ACCOUNT_STRUCTURE: TMP
+          ACA_SOURCE_SYSTEM: SS
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DBSHIFT
+            nodeName: STG_TMP_ACCOUNT_STRUCTURE
+          - locationName: DBSHIFT
+            nodeName: ACA_SOURCE_SYSTEM
+        join:
+          joinCondition: |-
+            FROM {{ ref('DBSHIFT', 'STG_TMP_ACCOUNT_STRUCTURE') }} TMP
+            CROSS JOIN {{ ref('DBSHIFT', 'ACA_SOURCE_SYSTEM') }} SS
+            WHERE SS.SOURCE_SYSTEM = 'GB'
+        name: ACA_ACCOUNT_STRUCTURE_STAGING_GB
+        noLinkRefs: []
+  name: ACA_ACCOUNT_STRUCTURE_STAGING_GB
+  overrideSQL: false
+  schema: DBO
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

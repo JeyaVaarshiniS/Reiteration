@@ -1,0 +1,54 @@
+fileVersion: 1
+id: 3c6b2a1f-9c8d-4e7f-a1b3-5c8e7f6a4b2d
+name: VW_TRANSACTION_DATE_FILE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DBSHIFT
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e8d7c6b-5a4b-4f9a-8b6c-4d3e1f0c4e8d
+          stepCounter: 3c6b2a1f-9c8d-4e7f-a1b3-5c8e7f6a4b2d
+        config: {}
+        dataType: DATE
+        description: ""
+        name: MIN_ACTIVITY_FROM_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8b6c4d3e-1f0c-4e8d-a1b3-5c8e7f6a4b2d
+                stepCounter: 9a7b5d1e-2f0c-4e8d-a1b3-5c8e7f6a4b2d
+            transform: MIN(S.ACTIVITY_FROM_DATE)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ACA_TRANSACTION_HEADER_STAGING: S
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DBSHIFT
+            nodeName: ACA_TRANSACTION_HEADER_STAGING
+        join:
+          joinCondition: FROM {{ ref('DBSHIFT', 'ACA_TRANSACTION_HEADER_STAGING') }} S
+        name: VW_TRANSACTION_DATE_FILE
+        noLinkRefs: []
+  name: VW_TRANSACTION_DATE_FILE
+  overrideSQL: false
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

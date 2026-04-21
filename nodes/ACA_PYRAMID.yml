@@ -1,0 +1,130 @@
+fileVersion: 1
+id: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+name: ACA_PYRAMID
+operation:
+  database: ALLIANT_CLAIMS_ASTRUS
+  deployEnabled: true
+  description: ""
+  locationName: DBSHIFT
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0f989e2c-3531-4c28-9c16-8c105086d34e
+          stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: CLIENT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a2c286a-743a-44e2-8b48-3162b7193f2f
+          stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: UNIT_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5d13e7f4-88d4-4861-9c3a-96c21e3f8983
+          stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: LEVEL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b13c4a2a-d227-4188-9d49-43c2c31c0e3e
+          stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SUBSIDIARY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f28d84a7-8f5c-43f1-b93d-d6c52a3c7c8c
+          stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: INSURED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e1c0d5a-1b2c-4e8c-a3d8-348f98e7d2e1
+          stepCounter: 6a3f8f2b-9d41-4c12-881b-3f2d2f7e9a0d
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: UNIT_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: ACA_PYRAMID
+  schema: DBO
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
