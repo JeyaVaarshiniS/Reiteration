@@ -1,0 +1,92 @@
+fileVersion: 1
+id: 5917452d-ff46-4a1d-8f24-4f90117b4c68
+name: ACA_ACCOUNT_STRUCTURE
+operation:
+  database: ALLIANT_CLAIMS_ASTRUS
+  deployEnabled: true
+  description: ""
+  locationName: DBSHIFT
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5b4c4f34-e465-4f40-8488-842236a99901
+          stepCounter: 5917452d-ff46-4a1d-8f24-4f90117b4c68
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: ACA_ACCOUNT_STRUCTURE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d266e74-2900-449e-8c3b-d5395a109a93
+          stepCounter: 5917452d-ff46-4a1d-8f24-4f90117b4c68
+        config: {}
+        dataType: DATETIME
+        defaultValue: ""
+        description: ""
+        name: ACA_DATE_UPDATED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a6353d86-ef79-4d61-b44c-26792437651a
+          stepCounter: 5917452d-ff46-4a1d-8f24-4f90117b4c68
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SOURCE_SYSTEM_ACCOUNT_STRUCTURE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f5ac1f79-668b-4b2a-b68e-e317c3870634
+          stepCounter: 5917452d-ff46-4a1d-8f24-4f90117b4c68
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: ACA_SOURCE_SYSTEM_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: ACA_ACCOUNT_STRUCTURE
+  schema: DBO
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
