@@ -1,0 +1,255 @@
+fileVersion: 1
+id: 597a9f87-e2a2-4780-8772-a7f45a666991
+name: V_COMBINED_INSERT_SOURCE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALLIANT_CLAIMS_ASTRUS_STAGE
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DBSHIFT
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e82e66fc-46c5-44d5-ab85-171b9c97a8e7
+          stepCounter: 597a9f87-e2a2-4780-8772-a7f45a666991
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SOURCE_SYSTEM_ACCOUNT_STRUCTURE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 636dd86c-132d-4113-918d-3d441f71a938
+                stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+            transform: ""
+          - columnReferences:
+              - columnCounter: 01c22144-8869-424a-a1da-e0a293c4e365
+                stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+            transform: ""
+        transform: UNIONED_DATA.SOURCE_SYSTEM_ACCOUNT_STRUCTURE_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 326759c8-d138-4c8d-8a8e-2877994a539c
+          stepCounter: 597a9f87-e2a2-4780-8772-a7f45a666991
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CLIENT_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e34193f4-0d33-4df4-a4f5-7f28ed01d8ab
+                stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+            transform: ""
+          - columnReferences:
+              - columnCounter: 3a2861c8-e04e-4f71-a488-842261a86b1c
+                stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+            transform: ""
+        transform: UNIONED_DATA.CLIENT_NUMBER
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b57b458b-f9d2-43bb-a5a6-745a55097430
+          stepCounter: 597a9f87-e2a2-4780-8772-a7f45a666991
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: UNIT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a2ddc769-e58f-4318-80df-8b77cc4b2853
+                stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+            transform: ""
+          - columnReferences:
+              - columnCounter: 63b469b7-b054-469c-9c71-2ed41270f2f0
+                stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+            transform: ""
+        transform: UNIONED_DATA.UNIT_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b13203f7-9d62-4977-b9c1-7f8a70c53842
+          stepCounter: 597a9f87-e2a2-4780-8772-a7f45a666991
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SITE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d155c1b6-f4fe-4835-8b54-04d88e4011eb
+                stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+            transform: ""
+          - columnReferences:
+              - columnCounter: 4a2b2512-58e1-419b-a010-090aa482594a
+                stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+            transform: ""
+        transform: UNIONED_DATA.SITE_NUMBER
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a630985c-15a4-4f01-987d-45e353285743
+          stepCounter: 597a9f87-e2a2-4780-8772-a7f45a666991
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DIVISION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c1737e8c-843e-46ed-82ae-6f2963162705
+                stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+            transform: ""
+          - columnReferences:
+              - columnCounter: 1a45938d-0e48-4384-a82f-53748232c4e2
+                stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+            transform: ""
+        transform: UNIONED_DATA.DIVISION_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 080709b1-5e91-4927-a9a3-5c026040e365
+          stepCounter: 597a9f87-e2a2-4780-8772-a7f45a666991
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DIVISION_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f3c5822f-d51d-44a6-bdc0-30b6911c0fcd
+                stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+            transform: ""
+          - columnReferences:
+              - columnCounter: 4eb740ca-d2f6-4a4b-ba86-061b8f156d95
+                stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+            transform: ""
+        transform: UNIONED_DATA.DIVISION_NAME
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 17b2b8d4-531e-4251-85b8-5777df7352a8
+          stepCounter: 597a9f87-e2a2-4780-8772-a7f45a666991
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SUBSIDIARY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3f77366b-8b9f-4315-9c59-ac044b360249
+                stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+            transform: ""
+          - columnReferences:
+              - columnCounter: b1ccf490-48e0-474c-a49e-1e96a2f77e68
+                stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+            transform: ""
+        transform: UNIONED_DATA.SUBSIDIARY_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1a995e8-3168-450f-a99f-5c9172080351
+          stepCounter: 597a9f87-e2a2-4780-8772-a7f45a666991
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SUBSIDIARY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 095f9c6d-5cc2-43bb-a8a4-3746777c08a9
+                stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+            transform: ""
+          - columnReferences:
+              - columnCounter: f322f96e-553b-48bc-b2c5-5555c27636e2
+                stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+            transform: ""
+        transform: UNIONED_DATA.SUBSIDIARY_NAME
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b13158c5-9271-464a-a1b6-a0589dd9e846
+          stepCounter: 597a9f87-e2a2-4780-8772-a7f45a666991
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LOCATION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f918d360-1e5f-4d6d-97e3-0599547b746a
+                stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+            transform: ""
+          - columnReferences:
+              - columnCounter: 2d1591f4-3d60-466d-9b16-56f4d1e0892c
+                stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+            transform: ""
+        transform: UNIONED_DATA.LOCATION_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b802a45a-c5ee-4500-a434-d02f7415494d
+          stepCounter: 597a9f87-e2a2-4780-8772-a7f45a666991
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LOCATION_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 60882e98-294b-4b13-b54c-53f7f8d67253
+                stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+            transform: ""
+          - columnReferences:
+              - columnCounter: fd7a34e0-5203-490b-85d8-9c1784c68e1a
+                stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+            transform: ""
+        transform: UNIONED_DATA.LOCATION_NAME
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 317b2046-e570-4965-a864-2454b68e9196
+          stepCounter: 597a9f87-e2a2-4780-8772-a7f45a666991
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: ACA_SOURCE_SYSTEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3d50821b-6d50-4825-9150-785662a5b23d
+                stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+            transform: ""
+          - columnReferences:
+              - columnCounter: c02c114f-c0c0-4318-868d-29c811232810
+                stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+            transform: ""
+        transform: UNIONED_DATA.ACA_SOURCE_SYSTEM_ID
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DBSHIFT
+            nodeName: V_GB_INSERT_SOURCE
+          - locationName: DBSHIFT
+            nodeName: V_ESIS_INSERT_SOURCE
+        join:
+          joinCondition: |-
+            FROM (
+              SELECT * FROM {{ ref('DBSHIFT', 'V_GB_INSERT_SOURCE') }}
+              UNION ALL
+              SELECT * FROM {{ ref('DBSHIFT', 'V_ESIS_INSERT_SOURCE') }}
+            ) "unioned_data"
+        name: V_COMBINED_INSERT_SOURCE
+        noLinkRefs: []
+  name: V_COMBINED_INSERT_SOURCE
+  overrideSQL: false
+  schema: DBO
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

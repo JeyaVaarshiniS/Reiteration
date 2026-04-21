@@ -1,0 +1,204 @@
+fileVersion: 1
+id: 0313f068-d784-4828-9719-74e7975f921f
+name: V_GB_INSERT_SOURCE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALLIANT_CLAIMS_ASTRUS_STAGE
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DBSHIFT
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 636dd86c-132d-4113-918d-3d441f71a938
+          stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SOURCE_SYSTEM_ACCOUNT_STRUCTURE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9e58b90a-c049-4113-912a-0b2a74c43916
+                stepCounter: 5693c66f-2b0e-4363-8a9d-5ac26543b573
+            transform: GB.SOURCE_SYSTEM_ACCOUNT_STRUCTURE_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e34193f4-0d33-4df4-a4f5-7f28ed01d8ab
+          stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CLIENT_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a6c4b2b3-f542-45e3-999d-16a75f566453
+                stepCounter: 5693c66f-2b0e-4363-8a9d-5ac26543b573
+            transform: GB.CLIENT_NUMBER
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2ddc769-e58f-4318-80df-8b77cc4b2853
+          stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: UNIT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3267d3d0-302a-4467-96a9-839f8f203874
+                stepCounter: 5693c66f-2b0e-4363-8a9d-5ac26543b573
+            transform: GB.UNIT_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d155c1b6-f4fe-4835-8b54-04d88e4011eb
+          stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SITE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d8c9a3a9-eb8a-40a2-be16-a36c84c1f9b3
+                stepCounter: 5693c66f-2b0e-4363-8a9d-5ac26543b573
+            transform: GB.SITE_NUMBER
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c1737e8c-843e-46ed-82ae-6f2963162705
+          stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DIVISION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 014a58b2-297c-486d-887e-e58f003a2729
+                stepCounter: 5693c66f-2b0e-4363-8a9d-5ac26543b573
+            transform: GB.DIVISION_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f3c5822f-d51d-44a6-bdc0-30b6911c0fcd
+          stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DIVISION_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c23d3876-0f8c-4f10-908c-690a2c0f2096
+                stepCounter: 5693c66f-2b0e-4363-8a9d-5ac26543b573
+            transform: GB.DIVISION_NAME
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3f77366b-8b9f-4315-9c59-ac044b360249
+          stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SUBSIDIARY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f7d1e089-a29d-4034-8b65-0a18ab8cf5f5
+                stepCounter: 5693c66f-2b0e-4363-8a9d-5ac26543b573
+            transform: GB.SUBSIDIARY_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 095f9c6d-5cc2-43bb-a8a4-3746777c08a9
+          stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SUBSIDIARY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d165b5fd-22a0-40e1-b472-74853041935b
+                stepCounter: 5693c66f-2b0e-4363-8a9d-5ac26543b573
+            transform: GB.SUBSIDIARY_NAME
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f918d360-1e5f-4d6d-97e3-0599547b746a
+          stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LOCATION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 322c3653-e837-4d76-90fe-00d3d5f661c9
+                stepCounter: 5693c66f-2b0e-4363-8a9d-5ac26543b573
+            transform: GB.LOCATION_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 60882e98-294b-4b13-b54c-53f7f8d67253
+          stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LOCATION_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c03c5ec8-4903-4c91-9c6a-60912fc10f0f
+                stepCounter: 5693c66f-2b0e-4363-8a9d-5ac26543b573
+            transform: GB.LOCATION_NAME
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3d50821b-6d50-4825-9150-785662a5b23d
+          stepCounter: 0313f068-d784-4828-9719-74e7975f921f
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: ACA_SOURCE_SYSTEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8b0a9b3a-231a-4299-a309-804d90954b53
+                stepCounter: 5693c66f-2b0e-4363-8a9d-5ac26543b573
+            transform: GB.ACA_SOURCE_SYSTEM_ID
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ACA_ACCOUNT_STRUCTURE_GB: GB
+          V_LATEST_LOAD_DATE: LD
+          ACA_ACCOUNT_STRUCTURE: MAIN
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DBSHIFT
+            nodeName: ACA_ACCOUNT_STRUCTURE_GB
+          - locationName: DBSHIFT
+            nodeName: V_LATEST_LOAD_DATE
+          - locationName: DBSHIFT
+            nodeName: ACA_ACCOUNT_STRUCTURE
+        join:
+          joinCondition: |-
+            FROM {{ ref('DBSHIFT', 'ACA_ACCOUNT_STRUCTURE_GB') }} AS GB
+            CROSS JOIN {{ ref('DBSHIFT', 'V_LATEST_LOAD_DATE') }} AS LD
+            LEFT JOIN {{ ref('DBSHIFT', 'ACA_ACCOUNT_STRUCTURE') }} AS MAIN ON GB.SOURCE_SYSTEM_ACCOUNT_STRUCTURE_ID = MAIN.SOURCE_SYSTEM_ACCOUNT_STRUCTURE_ID AND GB.ACA_SOURCE_SYSTEM_ID = MAIN.ACA_SOURCE_SYSTEM_ID
+            WHERE GB.ACA_DATE_UPDATED > LD.LAST_LOAD_DATE AND MAIN.SOURCE_SYSTEM_ACCOUNT_STRUCTURE_ID IS NULL
+        name: V_GB_INSERT_SOURCE
+        noLinkRefs: []
+  name: V_GB_INSERT_SOURCE
+  overrideSQL: false
+  schema: DBO
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

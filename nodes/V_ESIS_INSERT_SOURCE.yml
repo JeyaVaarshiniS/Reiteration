@@ -1,0 +1,204 @@
+fileVersion: 1
+id: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+name: V_ESIS_INSERT_SOURCE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALLIANT_CLAIMS_ASTRUS_STAGE
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DBSHIFT
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01c22144-8869-424a-a1da-e0a293c4e365
+          stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SOURCE_SYSTEM_ACCOUNT_STRUCTURE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4e9f7831-c423-4554-b620-3b9e4a3c1032
+                stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+            transform: ESIS.SOURCE_SYSTEM_ACCOUNT_STRUCTURE_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a2861c8-e04e-4f71-a488-842261a86b1c
+          stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CLIENT_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 32a033f7-920f-48e0-a541-69f8263de749
+                stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+            transform: ESIS.CLIENT_NUMBER
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 63b469b7-b054-469c-9c71-2ed41270f2f0
+          stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: UNIT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c7b4c7c8-075b-43a9-a9a3-5c24e6c38260
+                stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+            transform: ESIS.UNIT_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4a2b2512-58e1-419b-a010-090aa482594a
+          stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SITE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3010b93d-d39b-466d-8c10-09095690b206
+                stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+            transform: ESIS.SITE_NUMBER
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a45938d-0e48-4384-a82f-53748232c4e2
+          stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DIVISION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5b018512-19e0-40e1-950c-e274c431d102
+                stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+            transform: ESIS.DIVISION_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4eb740ca-d2f6-4a4b-ba86-061b8f156d95
+          stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DIVISION_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8b6715d3-861f-499b-a01c-7f51b66df870
+                stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+            transform: ESIS.DIVISION_NAME
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b1ccf490-48e0-474c-a49e-1e96a2f77e68
+          stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SUBSIDIARY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 421b5a26-9f82-4f6c-8067-27b203c9b740
+                stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+            transform: ESIS.SUBSIDIARY_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f322f96e-553b-48bc-b2c5-5555c27636e2
+          stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SUBSIDIARY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5d3c8c73-45ab-4c91-9524-817f6920f269
+                stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+            transform: ESIS.SUBSIDIARY_NAME
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d1591f4-3d60-466d-9b16-56f4d1e0892c
+          stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LOCATION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a63b469c-297c-47fc-8f64-469b81b8356b
+                stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+            transform: ESIS.LOCATION_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd7a34e0-5203-490b-85d8-9c1784c68e1a
+          stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LOCATION_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 771694f4-500b-48cd-96a8-2081d3d0f08e
+                stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+            transform: ESIS.LOCATION_NAME
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c02c114f-c0c0-4318-868d-29c811232810
+          stepCounter: 5790a6e8-2fd0-4228-a3f2-1d59643445de
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: ACA_SOURCE_SYSTEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e3413955-e744-42f1-bdce-62187f4c5496
+                stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+            transform: ESIS.ACA_SOURCE_SYSTEM_ID
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ACA_ACCOUNT_STRUCTURE_ESIS: ESIS
+          V_LATEST_LOAD_DATE: LD
+          ACA_ACCOUNT_STRUCTURE: MAIN
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DBSHIFT
+            nodeName: ACA_ACCOUNT_STRUCTURE_ESIS
+          - locationName: DBSHIFT
+            nodeName: V_LATEST_LOAD_DATE
+          - locationName: DBSHIFT
+            nodeName: ACA_ACCOUNT_STRUCTURE
+        join:
+          joinCondition: |-
+            FROM {{ ref('DBSHIFT', 'ACA_ACCOUNT_STRUCTURE_ESIS') }} AS ESIS
+            CROSS JOIN {{ ref('DBSHIFT', 'V_LATEST_LOAD_DATE') }} AS LD
+            LEFT JOIN {{ ref('DBSHIFT', 'ACA_ACCOUNT_STRUCTURE') }} AS MAIN ON ESIS.SOURCE_SYSTEM_ACCOUNT_STRUCTURE_ID = MAIN.SOURCE_SYSTEM_ACCOUNT_STRUCTURE_ID AND ESIS.ACA_SOURCE_SYSTEM_ID = MAIN.ACA_SOURCE_SYSTEM_ID
+            WHERE ESIS.ACA_DATE_UPDATED > LD.LAST_LOAD_DATE AND MAIN.SOURCE_SYSTEM_ACCOUNT_STRUCTURE_ID IS NULL
+        name: V_ESIS_INSERT_SOURCE
+        noLinkRefs: []
+  name: V_ESIS_INSERT_SOURCE
+  overrideSQL: false
+  schema: DBO
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

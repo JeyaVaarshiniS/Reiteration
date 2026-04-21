@@ -1,0 +1,244 @@
+fileVersion: 1
+id: 3c1b6a22-4467-422f-b4de-12e02251a316
+name: ACA_ACCOUNT_STRUCTURE_ESIS
+operation:
+  database: ALLIANT_CLAIMS_ASTRUS
+  deployEnabled: true
+  description: ""
+  locationName: DBSHIFT
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4e9f7831-c423-4554-b620-3b9e4a3c1032
+          stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SOURCE_SYSTEM_ACCOUNT_STRUCTURE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 32a033f7-920f-48e0-a541-69f8263de749
+          stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: CLIENT_NUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c7b4c7c8-075b-43a9-a9a3-5c24e6c38260
+          stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: UNIT_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3010b93d-d39b-466d-8c10-09095690b206
+          stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SITE_NUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5b018512-19e0-40e1-950c-e274c431d102
+          stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: DIVISION_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b6715d3-861f-499b-a01c-7f51b66df870
+          stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: DIVISION_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 421b5a26-9f82-4f6c-8067-27b203c9b740
+          stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SUBSIDIARY_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5d3c8c73-45ab-4c91-9524-817f6920f269
+          stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SUBSIDIARY_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a63b469c-297c-47fc-8f64-469b81b8356b
+          stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: LOCATION_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 771694f4-500b-48cd-96a8-2081d3d0f08e
+          stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: LOCATION_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e3413955-e744-42f1-bdce-62187f4c5496
+          stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: ACA_SOURCE_SYSTEM_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 97b686e9-e366-4e59-b1d5-91ec4d97d023
+          stepCounter: 3c1b6a22-4467-422f-b4de-12e02251a316
+        config: {}
+        dataType: DATETIME
+        defaultValue: ""
+        description: ""
+        name: ACA_DATE_UPDATED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: ACA_ACCOUNT_STRUCTURE_ESIS
+  schema: DBO
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

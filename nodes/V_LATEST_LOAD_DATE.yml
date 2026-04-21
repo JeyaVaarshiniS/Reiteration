@@ -1,0 +1,55 @@
+fileVersion: 1
+id: 569d9c22-95f7-4148-8e8e-ff012cd717f9
+name: V_LATEST_LOAD_DATE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALLIANT_CLAIMS_ASTRUS_STAGE
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DBSHIFT
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b130e633-1463-4467-a060-ff880816a13d
+          stepCounter: 569d9c22-95f7-4148-8e8e-ff012cd717f9
+        config: {}
+        dataType: DATETIME
+        description: ""
+        name: LAST_LOAD_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8d266e74-2900-449e-8c3b-d5395a109a93
+                stepCounter: 5917452d-ff46-4a1d-8f24-4f90117b4c68
+            transform: IFNULL(MAX(S.ACA_DATE_UPDATED), '1776-07-04 00:00:00.000'::TIMESTAMP_NTZ)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ACA_ACCOUNT_STRUCTURE: S
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DBSHIFT
+            nodeName: ACA_ACCOUNT_STRUCTURE
+        join:
+          joinCondition: FROM {{ ref('DBSHIFT', 'ACA_ACCOUNT_STRUCTURE') }} AS S WHERE S.ACA_ACCOUNT_STRUCTURE_ID
+            <> -1
+        name: V_LATEST_LOAD_DATE
+        noLinkRefs: []
+  name: V_LATEST_LOAD_DATE
+  overrideSQL: false
+  schema: DBO
+  sqlType: View
+  type: sql
+  version: 1
+type: Node
