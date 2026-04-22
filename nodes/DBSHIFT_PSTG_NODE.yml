@@ -1,0 +1,56 @@
+fileVersion: 1
+id: 57d81a8b-4c4f-4d6b-8a7e-4b476e33b9c7
+name: DBSHIFT_PSTG_NODE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: |-
+      BEGIN
+        USE DATABASE ALLIANT_CLAIMS_ASTRUS_STAGE;
+      
+        -- The original procedure used parameters for ID and Processed Flag.
+        -- These values should be parameterized in the execution environment.
+        -- Example values from the original procedure's test case are used below.
+        UPDATE DBO.ACA_CONTROL_PACKAGE_FILE
+        SET
+          PROCESSED_FLAG = TRUE, -- Corresponds to @iIsProcessed BIT = 1
+          ACA_DATE_UPDATED = CURRENT_TIMESTAMP(),
+          ACA_UPDATE_USER = 'dbo.spaca_aca_control_package_file_update'
+        WHERE
+          ACA_CONTROL_PACKAGE_FILE_ID = 1; -- Corresponds to @iId = 1
+      END;
+    testsEnabled: true
+    truncateBefore: false
+  database: ALLIANT_CLAIMS_ASTRUS_STAGE
+  deployEnabled: true
+  description: UPDATE-only conversion of spaca_aca_control_package_file_update
+  isMultisource: false
+  locationName: DBSHIFT
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a1b2c5d-4e6f-4a7b-8c9d-0e1f2a3b4c5d
+          stepCounter: 57d81a8b-4c4f-4d6b-8a7e-4b476e33b9c7
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        description: ""
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: CURRENT_TIMESTAMP()
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping: []
+  name: DBSHIFT_PSTG_NODE
+  overrideSQL: false
+  schema: DBO
+  sqlType: persistentStage
+  type: sql
+  version: 1
+type: Node
