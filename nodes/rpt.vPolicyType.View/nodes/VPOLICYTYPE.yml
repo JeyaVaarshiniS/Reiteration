@@ -1,0 +1,86 @@
+fileVersion: 1
+id: f8a9b0c1-d2e3-4f5a-b6c7-d8e9f0a1b2c3
+name: VPOLICYTYPE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ''
+    preSQL: ''
+    testsEnabled: true
+    truncateBefore: true
+  database: DEV_PRESENTATION
+  deployEnabled: true
+  description: ''
+  isMultisource: false
+  locationName: PRESENTATION
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d
+        stepCounter: f8a9b0c1-d2e3-4f5a-b6c7-d8e9f0a1b2c3
+      config: {}
+      dataType: VARCHAR
+      description: ''
+      name: POLICYCOVERAGETYPE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: d02d2c96-a61f-4706-972a-65385830c951
+          stepCounter: 4254f9c3-83bc-47d6-b41a-73cf4ac62f74
+        transform: AOC.POLICY_COVERAGE_TYPE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e
+        stepCounter: f8a9b0c1-d2e3-4f5a-b6c7-d8e9f0a1b2c3
+      config: {}
+      dataType: VARCHAR
+      description: ''
+      name: POLICYCOVERAGEKIND
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: c8c0786e-531c-4bca-99fb-0636a3dbbb0c
+          stepCounter: 4254f9c3-83bc-47d6-b41a-73cf4ac62f74
+        transform: AOC.POLICY_COVERAGE_KIND
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f
+        stepCounter: f8a9b0c1-d2e3-4f5a-b6c7-d8e9f0a1b2c3
+      config: {}
+      dataType: BIGINT
+      description: ''
+      name: POLICY_TYPE_KEY
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: d02d2c96-a61f-4706-972a-65385830c951
+          stepCounter: 4254f9c3-83bc-47d6-b41a-73cf4ac62f74
+        - columnCounter: c8c0786e-531c-4bca-99fb-0636a3dbbb0c
+          stepCounter: 4254f9c3-83bc-47d6-b41a-73cf4ac62f74
+        transform: CAST(SHA2(CONCAT(IFNULL(AOC.POLICY_COVERAGE_TYPE, '-x'), IFNULL(AOC.POLICY_COVERAGE_KIND, '-x')), 256) AS BIGINT)
+    cteString: ''
+    enabledColumnTestIDs: []
+    sourceMapping:
+    - aliases:
+        AO_CLAIM: AOC
+      customSQL:
+        customSQL: ''
+      dependencies:
+      - locationName: SRC-CLAIMS
+        nodeName: AO_CLAIM
+      join:
+        joinCondition: 'FROM {{ ref(''SRC-CLAIMS'', ''AO_CLAIM'') }} "AOC"
+
+          GROUP BY AOC.POLICY_COVERAGE_TYPE, AOC.POLICY_COVERAGE_KIND'
+      name: VPOLICYTYPE
+      noLinkRefs: []
+  name: VPOLICYTYPE
+  overrideSQL: false
+  schema: CLAIMS
+  sqlType: View
+  type: sql
+  version: 1
+type: Node
