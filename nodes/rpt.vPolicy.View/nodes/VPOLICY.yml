@@ -1,0 +1,170 @@
+fileVersion: 1
+id: 9a044d2d-222a-436f-b25b-01309d944c66
+name: VPOLICY
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ''
+    preSQL: ''
+    testsEnabled: true
+    truncateBefore: true
+  database: DEV_PRESENTATION
+  deployEnabled: true
+  description: ''
+  isMultisource: false
+  locationName: PRESENTATION
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: e8c464c1-f2f2-4e2b-b5d1-678080f5653b
+        stepCounter: 9a044d2d-222a-436f-b25b-01309d944c66
+      config: {}
+      dataType: NUMBER(38,0)
+      description: ''
+      name: POLICY_KEY
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: d5b67239-a49c-4402-8250-fd2b9f764a2a
+          stepCounter: d099d532-665a-4753-bc3e-37787c4ef9c9
+        - columnCounter: 5da92d23-4b62-4d72-9bb4-491405e8c7e8
+          stepCounter: d099d532-665a-4753-bc3e-37787c4ef9c9
+        - columnCounter: 4812edf7-4149-4ac3-8a2c-1916b91fb0a5
+          stepCounter: d099d532-665a-4753-bc3e-37787c4ef9c9
+        transform: HASH(IFNULL(PT.AO_CLAIM_EPIC_CLIENT_LOOKUP_CODE, '-x'), IFNULL(PT.AO_CLAIM_EPIC_POLICY_NUMBER, '-x'), IFNULL(CAST(PT.POLICY_YEAR AS VARCHAR(8)), '-x'))
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 37b514b8-f864-4e44-8839-a8c628f80424
+        stepCounter: 9a044d2d-222a-436f-b25b-01309d944c66
+      config: {}
+      dataType: VARCHAR
+      description: ''
+      name: CLAIMEPICCLIENTLOOKUPCODE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: d5b67239-a49c-4402-8250-fd2b9f764a2a
+          stepCounter: d099d532-665a-4753-bc3e-37787c4ef9c9
+        transform: PT.AO_CLAIM_EPIC_CLIENT_LOOKUP_CODE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 757820d8-5f21-4f93-82bd-484d8d1e22da
+        stepCounter: 9a044d2d-222a-436f-b25b-01309d944c66
+      config: {}
+      dataType: VARCHAR
+      description: ''
+      name: AO_CLAIM_EPIC_POLICY_NUMBER
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 5da92d23-4b62-4d72-9bb4-491405e8c7e8
+          stepCounter: d099d532-665a-4753-bc3e-37787c4ef9c9
+        transform: PT.AO_CLAIM_EPIC_POLICY_NUMBER
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 421b5e58-f75e-4c7b-b362-799ff0277873
+        stepCounter: 9a044d2d-222a-436f-b25b-01309d944c66
+      config: {}
+      dataType: NUMBER
+      description: ''
+      name: POLICYYEAR
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 4812edf7-4149-4ac3-8a2c-1916b91fb0a5
+          stepCounter: d099d532-665a-4753-bc3e-37787c4ef9c9
+        transform: PT.POLICY_YEAR
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 6718a5e3-8255-467f-9467-3475bb5f2b86
+        stepCounter: 9a044d2d-222a-436f-b25b-01309d944c66
+      config: {}
+      dataType: VARCHAR
+      description: ''
+      name: POLICYNUMBER
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 7b5babef-6de4-445c-8a1c-fc9ecacd5284
+          stepCounter: d099d532-665a-4753-bc3e-37787c4ef9c9
+        transform: PT.DW_POLICY_NUMBER
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 6f91f3b3-8b74-4b53-ae16-63d1a49f6f69
+        stepCounter: 9a044d2d-222a-436f-b25b-01309d944c66
+      config: {}
+      dataType: DATE
+      description: ''
+      name: POLICYEFFECTIVEDATE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 774e9be9-4c04-48d4-aa66-7a042558feaf
+          stepCounter: d099d532-665a-4753-bc3e-37787c4ef9c9
+        transform: PT.DW_POLICY_EFFECTIVE_DATE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 2d1c68e7-ff32-474c-bb4c-dd83d9571ebc
+        stepCounter: 9a044d2d-222a-436f-b25b-01309d944c66
+      config: {}
+      dataType: DATE
+      description: ''
+      name: POLICYEXPIRATIONDATE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 19da4807-b609-4d93-bdc3-7885fa5562be
+          stepCounter: d099d532-665a-4753-bc3e-37787c4ef9c9
+        transform: PT.DW_POLICY_EXPIRATION_DATE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 5979f41b-410a-493e-8f27-f4700d3a58e8
+        stepCounter: 9a044d2d-222a-436f-b25b-01309d944c66
+      config: {}
+      dataType: VARCHAR
+      description: ''
+      name: POLICYINEPICFLAG
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 69b9ada5-ca58-4907-bd55-c86f82454e67
+          stepCounter: d099d532-665a-4753-bc3e-37787c4ef9c9
+        transform: PT.POLICY_IN_EPIC_FLAG
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: d12741d4-86a0-432d-ae50-51a4c8032488
+        stepCounter: 9a044d2d-222a-436f-b25b-01309d944c66
+      config: {}
+      dataType: VARCHAR
+      description: ''
+      name: DW_POLICY_ID
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 9b2211be-f0f0-4899-8689-b0a7e4752bb1
+          stepCounter: d099d532-665a-4753-bc3e-37787c4ef9c9
+        transform: PT.DW_POLICY_ID
+    cteString: ''
+    enabledColumnTestIDs: []
+    sourceMapping:
+    - aliases:
+        POLICY_TRANSACTION: PT
+      customSQL:
+        customSQL: ''
+      dependencies:
+      - locationName: SRC-CLAIMS
+        nodeName: POLICY_TRANSACTION
+      join:
+        joinCondition: FROM {{ ref('SRC-CLAIMS', 'POLICY_TRANSACTION') }} "PT"
+      name: VPOLICY
+      noLinkRefs: []
+  name: VPOLICY
+  overrideSQL: false
+  schema: CLAIMS
+  sqlType: View
+  type: sql
+  version: 1
+type: Node
