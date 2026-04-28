@@ -1,0 +1,7 @@
+fileVersion: 1
+id: e08179c0-f9d1-4f1f-ab7d-5bdee38b3b5a
+name: rpt.vClient.View
+steps:
+  - d099d532-665a-4753-bc3e-37787c4ef9c9
+  - e7183e9b-4b2e-4638-ac7d-e0b605ab3e5b
+type: Subgraph

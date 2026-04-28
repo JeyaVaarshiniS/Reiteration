@@ -1,0 +1,7 @@
+fileVersion: 1
+id: 55efad4c-3609-4a2f-891f-acfbb775f1a4
+name: rpt.vPolicyTransactionBridge.View
+steps:
+  - 4254f9c3-83bc-47d6-b41a-73cf4ac62f74
+  - e9f8a7b6-c5d4-4e3a-2b1c-0a9b8c7d6e5f
+type: Subgraph

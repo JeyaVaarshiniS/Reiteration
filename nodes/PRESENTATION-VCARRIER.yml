@@ -1,0 +1,69 @@
+fileVersion: 1
+id: dae6c3f1-3b8d-4f9c-af4d-1a7e9ba05f8e
+name: VCARRIER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: DEV_PRESENTATION
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: PRESENTATION
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ebf7d4a2-4c9e-4a0d-b05e-2b8f0cb16a9f
+          stepCounter: dae6c3f1-3b8d-4f9c-af4d-1a7e9ba05f8e
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CARRIER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cd1a1988-370e-4b0f-8d53-ae77227eeab3
+                stepCounter: 4254f9c3-83bc-47d6-b41a-73cf4ac62f74
+            transform: DISTINCT carrier_name
+        transform: DBO_AO_CLAIM.CARRIER_NAME
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f008e5b3-5da0-4b1e-c16f-3c9a1dc27ba0
+          stepCounter: dae6c3f1-3b8d-4f9c-af4d-1a7e9ba05f8e
+        config: {}
+        dataType: BIGINT
+        description: ""
+        name: CARRIER_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cd1a1988-370e-4b0f-8d53-ae77227eeab3
+                stepCounter: 4254f9c3-83bc-47d6-b41a-73cf4ac62f74
+            transform: CAST(HASHBYTES('SHA2_256', ISNULL(DISTINCT carrier_name, '-x')) AS BIGINT)
+        transform: HASH(IFNULL(DBO_AO_CLAIM.CARRIER_NAME, '-x'))
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC-CLAIMS
+            nodeName: AO_CLAIM
+        join:
+          joinCondition: FROM (SELECT DISTINCT CARRIER_NAME FROM {{ ref('SRC-CLAIMS', 'AO_CLAIM') }}) "dbo_ao_claim"
+        name: VCARRIER
+        noLinkRefs: []
+  name: VCARRIER
+  overrideSQL: false
+  schema: CLAIMS
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

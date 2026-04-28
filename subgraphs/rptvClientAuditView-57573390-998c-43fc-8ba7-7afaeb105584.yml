@@ -1,0 +1,9 @@
+fileVersion: 1
+id: 57573390-998c-43fc-8ba7-7afaeb105584
+name: rpt.vClientAudit.View
+steps:
+  - b3c4d5e6-f1a2-4b3c-9d8e-7f6a5b4c3d2e
+  - c3e5e4d2-3a9a-4f5e-9a2c-9a1d5e3c1b1a
+  - d4e5f6a1-b2c3-4d5e-8f9a-0b1c2d3e4f5a
+  - f1a2b3c4-d5e6-4f7a-a6b7-c8d9e0f1a2b3
+type: Subgraph

@@ -1,0 +1,77 @@
+fileVersion: 1
+id: e9f8a7b6-c5d4-4e3a-2b1c-0a9b8c7d6e5f
+name: VPOLICYTRANSACTIONBRIDGE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: DEV_PRESENTATION
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: PRESENTATION
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f0a9b8c7-d6e5-4f3a-1b2c-9a8b7c6d5e4f
+          stepCounter: e9f8a7b6-c5d4-4e3a-2b1c-0a9b8c7d6e5f
+        config: {}
+        dataType: BIGINT
+        description: ""
+        name: POLICY_TRANSACTION_KEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 085e4d3f-f2b6-4b71-b9f9-8f65fef221e1
+                stepCounter: 4254f9c3-83bc-47d6-b41a-73cf4ac62f74
+              - columnCounter: 066ba0fd-5f2d-41e2-ac74-aa0815e9e4b6
+                stepCounter: 4254f9c3-83bc-47d6-b41a-73cf4ac62f74
+              - columnCounter: 2e358931-ab40-48f6-b46b-81496e5eb070
+                stepCounter: 4254f9c3-83bc-47d6-b41a-73cf4ac62f74
+            transform: |-
+              DISTINCT BITAND(
+                  TO_NUMBER(
+                      LEFT(
+                          SHA2(
+                              CONCAT(
+                                  COALESCE(epic_client_lookup_code, '-x'),
+                                  COALESCE(epic_policy_number, '-x'),
+                                  COALESCE(CAST(policy_year AS VARCHAR(4)), '-x')
+                              ),
+                              256
+                          ),
+                          15
+                      ),
+                      REPEAT('F', 15),
+                      16
+                  ),
+                  9223372036854775807  -- MAX BIGINT
+              )
+        transform: HASH(CONCAT(IFNULL(SRC.EPIC_CLIENT_LOOKUP_CODE, '-x'), IFNULL(SRC.EPIC_POLICY_NUMBER, '-x'), IFNULL(CAST(SRC.POLICY_YEAR AS VARCHAR(4)), '-x')))
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          AO_CLAIM: SRC
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC-CLAIMS
+            nodeName: AO_CLAIM
+        join:
+          joinCondition: FROM {{ ref('SRC-CLAIMS', 'AO_CLAIM') }} "SRC"
+        name: VPOLICYTRANSACTIONBRIDGE
+        noLinkRefs: []
+  name: VPOLICYTRANSACTIONBRIDGE
+  overrideSQL: false
+  schema: CLAIMS
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,7 @@
+fileVersion: 1
+id: d24af966-cb16-40b7-b1d0-cba9b9fc48a2
+name: rpt.vClientBridge.View
+steps:
+  - 5a8a47e1-8f5b-43d9-9523-2831c9e8378d
+  - d099d532-665a-4753-bc3e-37787c4ef9c9
+type: Subgraph
