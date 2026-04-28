@@ -1,0 +1,309 @@
+fileVersion: 1
+id: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+name: V_DATE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: DEV_PRESENTATION
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: PRESENTATION
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 320d5cc0-5eb8-4903-b0c8-479a0b925b34
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: INT
+        description: ""
+        name: AO_DATE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b1cd92fe-1eab-4a02-b275-b3d0118f3938
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: ao_date_id
+        transform: AO_DATE.AO_DATE_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0f787e91-72f3-4770-b6f7-c255d14e9f75
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: DATE
+        description: ""
+        name: FULLDATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a775d8eb-8595-4c3d-8110-d570889489c9
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: full_date
+        transform: AO_DATE.FULL_DATE
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3d50820f-0744-4820-8041-eb10e34094a9
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: INT
+        description: ""
+        name: DAYNUMBEROFWEEK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 96235563-2e4c-4a1f-9bc3-67d096548308
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: day_number_of_week
+        transform: AO_DATE.DAY_NUMBER_OF_WEEK
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6ed810e7-8848-43d9-a791-7b3b4f99dd9d
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DAYNAMEOFWEEK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 75cdc38c-4310-44fc-8e19-7f8eeeeabdde
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: day_name_of_week
+        transform: AO_DATE.DAY_NAME_OF_WEEK
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d36093d5-71ad-4674-8b63-ab98e29cfde5
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: INT
+        description: ""
+        name: DAYNUMBEROFMONTH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 638db090-c900-479a-bab0-0e0f62a7edc7
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: day_number_of_month
+        transform: AO_DATE.DAY_NUMBER_OF_MONTH
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b6716a4-4360-4929-ac29-da5839b2545d
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: INT
+        description: ""
+        name: DAYNUMBEROFYEAR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 83c779be-89d6-4022-b668-29f997444570
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: day_number_of_year
+        transform: AO_DATE.DAY_NUMBER_OF_YEAR
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cb4f0f08-ca3d-4c3e-8625-1e43c5f2b8ba
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: INT
+        description: ""
+        name: WEEKNUMBEROFYEAR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 96629b21-282f-4f95-9d43-8110f33a4b45
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: week_number_of_year
+        transform: AO_DATE.WEEK_NUMBER_OF_YEAR
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5740fc9e-5b12-4010-8b9f-85f0ef777b55
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: MONTHNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b52bf0a4-d502-4e86-9ce8-41ab4af801c6
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: month_name
+        transform: AO_DATE.MONTH_NAME
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e88b604-5f56-4c40-8b1c-77d0792376b9
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: MONTHSHORTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b86aed56-2003-4ab5-94e9-ca4e55bffe67
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: month_short_name
+        transform: AO_DATE.MONTH_SHORT_NAME
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 746c8713-7efd-400b-932d-209a5666f7f2
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: INT
+        description: ""
+        name: MONTHNUMBEROFYEAR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ce18303d-6c3e-4ce0-b47c-04c0cc45e2fa
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: month_number_of_year
+        transform: AO_DATE.MONTH_NUMBER_OF_YEAR
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d3fdd1f-0e1d-4048-b425-dae5a8c9e472
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: INT
+        description: ""
+        name: CALENDARQUARTER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4bdf09b2-e48a-443a-8bbf-7dd7de36cefa
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: calendar_quarter
+        transform: AO_DATE.CALENDAR_QUARTER
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8251e041-9a7c-4734-9ca3-f54248558661
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CALENDARQUARTERNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bb11440b-b2f0-494c-a4ff-183844542e73
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: calendar_quarter_name
+        transform: AO_DATE.CALENDAR_QUARTER_NAME
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 341a94fa-b530-47fc-8f6a-4b07d0f94f99
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CALENDARYEARQTR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4830b003-1ff5-4ff7-b4d0-8da58fe2ffde
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: calendar_year_quarter
+        transform: AO_DATE.CALENDAR_YEAR_QUARTER
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 18b76df4-9b7e-49b0-955a-e71e7235b3ee
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CALENDARYEARMONTH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0792e535-6892-408e-8c0f-53c9ba66bcbb
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: calendar_year_month
+        transform: AO_DATE.CALENDAR_YEAR_MONTH
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4208a113-d02f-4888-af28-668b13997f74
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: INT
+        description: ""
+        name: CALENDARYEARMONTHSORT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c888d1ba-6252-4d21-837f-26d0c9daba29
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: calendar_year_month_sort
+        transform: AO_DATE.CALENDAR_YEAR_MONTH_SORT
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c031976a-eb2b-4573-8224-001099e03d3c
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: INT
+        description: ""
+        name: CALENDARYEAR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 326218b2-1b81-4b62-88d7-469858391006
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: calendar_year
+        transform: AO_DATE.CALENDAR_YEAR
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6052f9cd-e95b-4ec5-b384-6330541743f0
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: INT
+        description: ""
+        name: CALENDARYEARDESC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 326218b2-1b81-4b62-88d7-469858391006
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: calendar_year
+        transform: AO_DATE.CALENDAR_YEAR
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f3119fbd-c692-49da-8b1e-b3b3a4a2b251
+          stepCounter: 3c6a4d7d-6c1e-45a8-b57f-64d84f4784a0
+        config: {}
+        dataType: INT
+        description: ""
+        name: CALENDARYEARSORTSDESC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 326218b2-1b81-4b62-88d7-469858391006
+                stepCounter: 73234ce6-0f2c-42d6-9c78-3637dc272257
+            transform: calendar_year * -1
+        transform: AO_DATE.CALENDAR_YEAR * -1
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC-CLAIMS
+            nodeName: AO_DATE
+        join:
+          joinCondition: FROM {{ ref('SRC-CLAIMS', 'AO_DATE') }} "AO_DATE"
+        name: V_DATE
+        noLinkRefs: []
+  name: V_DATE
+  overrideSQL: false
+  schema: CLAIMS
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

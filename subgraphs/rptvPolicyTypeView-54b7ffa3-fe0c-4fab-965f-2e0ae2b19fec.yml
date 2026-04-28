@@ -1,0 +1,7 @@
+fileVersion: 1
+id: 54b7ffa3-fe0c-4fab-965f-2e0ae2b19fec
+name: rpt.vPolicyType.View
+steps:
+  - 4254f9c3-83bc-47d6-b41a-73cf4ac62f74
+  - f8a9b0c1-d2e3-4f5a-b6c7-d8e9f0a1b2c3
+type: Subgraph

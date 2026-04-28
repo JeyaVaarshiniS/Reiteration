@@ -1,0 +1,7 @@
+fileVersion: 1
+id: 80f5f1aa-06f6-4510-a1e3-ae85baaebff7
+name: rpt.vPolicyTransaction.View
+steps:
+  - 9a7b5d1e-8e4a-4d7c-8d1e-9a7b5d1e8e4a
+  - d099d532-665a-4753-bc3e-37787c4ef9c9
+type: Subgraph

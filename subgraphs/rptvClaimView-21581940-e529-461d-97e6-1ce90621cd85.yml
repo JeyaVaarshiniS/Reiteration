@@ -1,0 +1,8 @@
+fileVersion: 1
+id: 21581940-e529-461d-97e6-1ce90621cd85
+name: rpt.vClaim.View
+steps:
+  - 4254f9c3-83bc-47d6-b41a-73cf4ac62f74
+  - 5a9391ab-0f56-42d7-b8d2-1c2518c7c093
+  - 9d17d0c3-305f-4a0b-930f-b0f34d19b787
+type: Subgraph
